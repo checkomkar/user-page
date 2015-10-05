@@ -109,7 +109,7 @@ body{
             }
         }
 
-        @media only screen and (max-width: 375px){
+        @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
             min-height: 200px;
             .user-details-container {
                 box-sizing: border-box;
@@ -143,9 +143,16 @@ body{
 
     }
 
-    @media only screen and (max-width: 375px){
-        .cover-container{
-
+    .menu-tabs{
+        display: none;
+        background-color: #e2e0e4;
+        padding: 2% 5%;
+        text-align: left;
+        i{
+            cursor: pointer;
+        }
+        @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
+            display: block;
         }
     }
 
@@ -184,7 +191,7 @@ body{
                 }
             }
         }
-        @media only screen and (max-width: 375px){
+        @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
             .container-fluid{
                 width: 100%;
             }
@@ -243,11 +250,27 @@ body{
             -ms-transition-timing-function: ease-out;
             transition-timing-function: ease-out;
         }
-
-        .maintab-container{
-            width: 20%;
-            display: inline-block;
-            vertical-align: top;
+        [data-tab-target]{
+            display: none;
+            @media  @phone-strict, @smphone, @vsmphone, @vvsmphone{
+                display: block;
+                width: 100%;
+                position: fixed;
+                min-height: 100%;
+                left: -100%;
+                //right: -100%;
+                top: 0;
+                //background: rgba(0,0,0,0.5);
+                z-index: 1000;
+                ul.maintab{
+                    background: transparent;
+                    width: 75%;
+                    li{
+                        color: white;
+                        background: rgba(0,0,0,0.9);
+                    }
+                }
+            }
             ul.maintab{
                 margin: 0;
                 padding: 0;
@@ -255,14 +278,15 @@ body{
                     //width: 180px;
                     list-style-type: none;
                     display: block;
-                    text-shadow: 0px 1px 1px #F2F1F0;
+                    //text-shadow: 0px 1px 1px #F2F1F0;
                     font-size: 1.5em;
                     position: relative;
                     border-right-width: 0;
                     //border-bottom: 1px solid #DDD;
                     margin: auto;
                     padding: 24px !important;
-                    background: #f4f4f4; /* Old browsers */
+                    //background: #f4f4f4; /* Old browsers */
+                    cursor: pointer;
                     @media only screen and (max-width: 995px){
                         font-size: 1.2em;
                     }
@@ -311,6 +335,96 @@ body{
             }
         }
 
+        .maintab-container{
+            width: 20%;
+            display: inline-block;
+            vertical-align: top;
+        
+            @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
+                display: none;
+                width: 75%;
+                position: fixed;
+                min-height: 100%;
+                left: 0;
+                right: 0;
+                top: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 1000;
+                ul.maintab{
+                    background: rgba(0,0,0,0.5);
+                    li{
+                        color: white;
+                        background: rgba(0,0,0,0.5);
+                    }
+                }
+            }
+            ul.maintab{
+                margin: 0;
+                padding: 0;
+                li{
+                    //width: 180px;
+                    list-style-type: none;
+                    display: block;
+                    //text-shadow: 0px 1px 1px #F2F1F0;
+                    font-size: 1.5em;
+                    position: relative;
+                    border-right-width: 0;
+                    //border-bottom: 1px solid #DDD;
+                    margin: auto;
+                    padding: 24px !important;
+                    //background: #f4f4f4; /* Old browsers */
+                    @media only screen and (max-width: 995px){
+                        font-size: 1.2em;
+                    }
+
+                    @media only screen and (max-width: 675px){
+                        font-size: 1em;
+                    }
+                    i{
+                        padding-right: 20px;
+                    }
+                    .icon{
+                        width: 20px;
+                        height: 18px;
+                        margin-right: 10px;
+                        @media only screen and (max-width: 675px){
+                            width: 14px;
+                            height: 14px;
+                        }
+                    }
+                    .activity{
+                        //background: url(../images/activity-icon.png) no-repeat;
+                        background-size: contain;
+                        padding-right: 22px;
+                        margin: 10px 10px 0px 0px;
+                    }
+
+                }
+                li.current{
+                    color: black;
+                    border-right: none;
+                    z-index: 10;
+                    background: #edeaea;
+                    position: relative;
+                    background-image: url(../images/arrow-icon.png);
+                    background-position: left;
+                    background-repeat: no-repeat;
+                    background-size: 10px;
+                }
+
+                li.first.current{
+                    //border-bottom: 1px solid #DDD;
+                }
+                li.last{
+                    border-bottom: none;
+                }
+            }
+
+            @media only screen and (max-width: 375px){
+
+            }
+        }
+
         #v-nav{
             height: 100%;
             width: 50%;
@@ -319,7 +433,10 @@ body{
             color: #333;
             //font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
             background-color: #ede6e6;
-
+            @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
+                display: block;
+                width: 100%;
+            }
 
             div.tab-content{
 
@@ -631,6 +748,25 @@ body{
             vertical-align: top;
             box-sizing: border-box;
             padding: 1% 2%;
+            @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
+                display: block;
+                width: 100%;
+                .recent-visit{
+                    width: 100%;
+                    .vis_stores{
+                        .vis_stores_div{
+                            div{
+                                .store_img{
+                                    padding-right: 10px;
+                                }
+                                .store_details{
+                                    width: 80%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .recent-visit{
                 min-height: 100%;
                 display: inline-block;
@@ -638,6 +774,7 @@ body{
                 &.follow_list{
                     display: inline-block;
                 }
+
                 .vis_stores{
                     margin-bottom: 10px;
                     .follow_header{
@@ -650,16 +787,12 @@ body{
                         div{
                             padding: 0px 0 15px;
                             .store_img{
-                                width: 14%;
                                 padding-right: 10px;
                             }
                             .store_details{
                                 display: inline-block;
                                 vertical-align: top;
                                 width: 60%;
-                                @media only screen and (max-width: 850px) {
-                                    width: 40% !important;
-                                }
                                 h5, h6{
                                     margin: 0;
                                 }
@@ -687,368 +820,9 @@ body{
                                 }
                             }
                         }
-
-                    }
-                }
-
-
-
-                @media @large {
-                    min-height: 100%;
-                    display: inline-block;
-                    vertical-align: top;
-                    &.follow_list{
-                        display: inline-block;
-                    }
-                    .vis_stores{
-                        margin-bottom: 10px;
-                        .follow_header{
-                            font-size: 15px;
-                            text-align: left;
-                            margin-bottom: 10%;
-                        }
-                        .vis_stores_div{
-                            list-style-type: none;
-                            div{
-                                padding: 0px 0 15px;
-                                .store_img{
-                                    width: 14%;
-                                    padding-right: 10px;
-                                }
-                                .store_details{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    width: 60%;
-                                    h5, h6{
-                                        margin: 0;
-                                    }
-                                    .store_name{
-                                        font-size: 10px;
-                                        font-weight: bolder;
-                                        height: 5px
-                                    }
-                                    .store_address{
-                                        font-size: 12px;
-                                        height: 25px;
-                                        word-wrap: break-word;
-                                        max-width: 155px;
-                                    }
-                                }
-                                .rev_fav{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    .rev{
-                                        width: 1rem;
-                                        //vertical-align: top
-                                    }
-                                    .fav{
-                                        width: 1rem;
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-                }
-                @media only screen and (min-width: 992px) and (max-width: 1199px) {
-                    min-height: 100%;
-                    display: inline-block;
-                    vertical-align: top;
-                    &.follow_list{
-                        display: inline-block;
-                    }
-                    .vis_stores{
-                        margin-bottom: 10px;
-                        .follow_header{
-                            font-size: 15px;
-                            text-align: left;
-                            margin-bottom: 10%;
-                        }
-                        .vis_stores_div{
-                            list-style-type: none;
-                            div{
-                                padding: 0px 0 15px;
-                                .store_img{
-                                    width: 14%;
-                                    padding-right: 10px;
-                                }
-                                .store_details{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    width: 55%;
-                                    h5, h6{
-                                        margin: 0;
-                                    }
-                                    .store_name{
-                                        font-size: 10px;
-                                        font-weight: bolder;
-                                        height: 5px
-                                    }
-                                    .store_address{
-                                        font-size: 12px;
-                                        height: 25px;
-                                        word-wrap: break-word;
-                                        max-width: 155px;
-                                    }
-                                }
-                                .rev_fav{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    .rev{
-                                        width: 1rem;
-                                        //vertical-align: top
-                                    }
-                                    .fav{
-                                        width: 1rem;
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-                }
-                @media only screen and (min-width: 768px) and (max-width: 991px) {
-                    min-height: 100%;
-                    display: inline-block;
-                    vertical-align: top;
-                    &.follow_list{
-                        display: inline-block;
-                    }
-                    .vis_stores{
-                        margin-bottom: 10px;
-                        .follow_header{
-                            font-size: 15px;
-                            text-align: left;
-                            margin-bottom: 10%;
-                        }
-                        .vis_stores_div{
-                            list-style-type: none;
-                            div{
-                                padding: 0px 0 15px;
-                                .store_img{
-                                    width: 14%;
-                                    padding-right: 10px;
-                                }
-                                .store_details{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    width: 55%;
-                                    h5, h6{
-                                        margin: 0;
-                                    }
-                                    .store_name{
-                                        font-size: 10px;
-                                        font-weight: bolder;
-                                        height: 5px
-                                    }
-                                    .store_address{
-                                        font-size: 12px;
-                                        height: 25px;
-                                        word-wrap: break-word;
-                                        max-width: 155px;
-                                    }
-                                }
-                                .rev_fav{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    .rev{
-                                        width: 1rem;
-                                        //vertical-align: top
-                                    }
-                                    .fav{
-                                        width: 1rem;
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-                }
-                @media only screen and (min-width: 480px) and (max-width: 767px) {
-
-                    min-height: 100%;
-                    display: inline-block;
-                    vertical-align: top;
-                    &.follow_list{
-                        display: inline-block;
-                    }
-                    .vis_stores{
-                        margin-bottom: 10px;
-                        .follow_header{
-                            font-size: 15px;
-                            text-align: left;
-                            margin-bottom: 10%;
-                        }
-                        .vis_stores_div{
-                            list-style-type: none;
-                            div{
-                                padding: 0px 0 15px;
-                                .store_img{
-                                    width: 14%;
-                                    padding-right: 10px;
-                                }
-                                .store_details{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    width: 55%;
-                                    h5, h6{
-                                        margin: 0;
-                                    }
-                                    .store_name{
-                                        font-size: 10px;
-                                        font-weight: bolder;
-                                        height: 5px
-                                    }
-                                    .store_address{
-                                        font-size: 12px;
-                                        height: 25px;
-                                        word-wrap: break-word;
-                                        max-width: 155px;
-                                    }
-                                }
-                                .rev_fav{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    .rev{
-                                        width: 1rem;
-                                        //vertical-align: top
-                                    }
-                                    .fav{
-                                        width: 1rem;
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-                }
-                @media only screen and (min-width: 320px) and (max-width: 479px) {
-
-                    min-height: 100%;
-                    display: inline-block;
-                    vertical-align: top;
-                    &.follow_list{
-                        display: inline-block;
-                    }
-                    .vis_stores{
-                        margin-bottom: 10px;
-                        .follow_header{
-                            font-size: 15px;
-                            text-align: left;
-                            margin-bottom: 10%;
-                        }
-                        .vis_stores_div{
-                            list-style-type: none;
-                            div{
-                                padding: 0px 0 15px;
-                                .store_img{
-                                    width: 14%;
-                                    padding-right: 10px;
-                                }
-                                .store_details{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    width: 55%;
-                                    h5, h6{
-                                        margin: 0;
-                                    }
-                                    .store_name{
-                                        font-size: 10px;
-                                        font-weight: bolder;
-                                        height: 5px
-                                    }
-                                    .store_address{
-                                        font-size: 12px;
-                                        height: 25px;
-                                        word-wrap: break-word;
-                                        max-width: 155px;
-                                    }
-                                }
-                                .rev_fav{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    .rev{
-                                        width: 1rem;
-                                        //vertical-align: top
-                                    }
-                                    .fav{
-                                        width: 1rem;
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-                }
-                @media only screen and (min-width: 50px) and (max-width: 319px) {
-
-                    min-height: 100%;
-                    display: inline-block;
-                    vertical-align: top;
-                    &.follow_list{
-                        display: inline-block;
-                    }
-                    .vis_stores{
-                        margin-bottom: 10px;
-                        .follow_header{
-                            font-size: 15px;
-                            text-align: left;
-                            margin-bottom: 10%;
-                        }
-                        .vis_stores_div{
-                            list-style-type: none;
-                            div{
-                                padding: 0px 0 15px;
-                                .store_img{
-                                    width: 14%;
-                                    padding-right: 10px;
-                                }
-                                .store_details{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    width: 55%;
-                                    h5, h6{
-                                        margin: 0;
-                                    }
-                                    .store_name{
-                                        font-size: 10px;
-                                        font-weight: bolder;
-                                        height: 5px
-                                    }
-                                    .store_address{
-                                        font-size: 12px;
-                                        height: 25px;
-                                        word-wrap: break-word;
-                                        max-width: 155px;
-                                    }
-                                }
-                                .rev_fav{
-                                    display: inline-block;
-                                    vertical-align: top;
-                                    .rev{
-                                        width: 1rem;
-                                        //vertical-align: top
-                                    }
-                                    .fav{
-                                        width: 1rem;
-                                    }
-                                }
-                            }
-
-                        }
                     }
                 }
             }
         }
-
     }
-
-
-
-
-
-
 }
-
-
-

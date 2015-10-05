@@ -76,7 +76,7 @@ body {
 [data-user-page] .cover-container .user-details-container .follow {
   width: 19%;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   [data-user-page] .cover-container {
     min-height: 200px;
   }
@@ -107,6 +107,20 @@ body {
     border-radius: 50%;
     background-color: darkgray;
     margin: 0 auto;
+  }
+}
+[data-user-page] .menu-tabs {
+  display: none;
+  background-color: #e2e0e4;
+  padding: 2% 5%;
+  text-align: left;
+}
+[data-user-page] .menu-tabs i {
+  cursor: pointer;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-page] .menu-tabs {
+    display: block;
   }
 }
 [data-user-page] .tag-headings-container {
@@ -152,7 +166,7 @@ body {
   width: 10%;
   padding-right: 5%;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   [data-user-page] .tag-headings-container .container-fluid {
     width: 100%;
   }
@@ -215,10 +229,109 @@ body {
   -ms-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
+[data-user-page] .wrapper [data-tab-target] {
+  display: none;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-page] .wrapper [data-tab-target] {
+    display: block;
+    width: 100%;
+    position: fixed;
+    min-height: 100%;
+    left: -100%;
+    top: 0;
+    z-index: 1000;
+  }
+  [data-user-page] .wrapper [data-tab-target] ul.maintab {
+    background: transparent;
+    width: 75%;
+  }
+  [data-user-page] .wrapper [data-tab-target] ul.maintab li {
+    color: white;
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+[data-user-page] .wrapper [data-tab-target] ul.maintab {
+  margin: 0;
+  padding: 0;
+}
+[data-user-page] .wrapper [data-tab-target] ul.maintab li {
+  list-style-type: none;
+  display: block;
+  font-size: 1.5em;
+  position: relative;
+  border-right-width: 0;
+  margin: auto;
+  padding: 24px !important;
+  cursor: pointer;
+}
+@media only screen and (max-width: 995px) {
+  [data-user-page] .wrapper [data-tab-target] ul.maintab li {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 675px) {
+  [data-user-page] .wrapper [data-tab-target] ul.maintab li {
+    font-size: 1em;
+  }
+}
+[data-user-page] .wrapper [data-tab-target] ul.maintab li i {
+  padding-right: 20px;
+}
+[data-user-page] .wrapper [data-tab-target] ul.maintab li .icon {
+  width: 20px;
+  height: 18px;
+  margin-right: 10px;
+}
+@media only screen and (max-width: 675px) {
+  [data-user-page] .wrapper [data-tab-target] ul.maintab li .icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+[data-user-page] .wrapper [data-tab-target] ul.maintab li .activity {
+  background-size: contain;
+  padding-right: 22px;
+  margin: 10px 10px 0px 0px;
+}
+[data-user-page] .wrapper [data-tab-target] ul.maintab li.current {
+  color: black;
+  border-right: none;
+  z-index: 10;
+  background: #edeaea;
+  position: relative;
+  background-image: url(../images/arrow-icon.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+[data-user-page] .wrapper [data-tab-target] ul.maintab li.last {
+  border-bottom: none;
+}
 [data-user-page] .wrapper .maintab-container {
   width: 20%;
   display: inline-block;
   vertical-align: top;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-page] .wrapper .maintab-container {
+    display: none;
+    width: 75%;
+    position: fixed;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  [data-user-page] .wrapper .maintab-container ul.maintab {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  [data-user-page] .wrapper .maintab-container ul.maintab li {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 [data-user-page] .wrapper .maintab-container ul.maintab {
   margin: 0;
@@ -227,14 +340,11 @@ body {
 [data-user-page] .wrapper .maintab-container ul.maintab li {
   list-style-type: none;
   display: block;
-  text-shadow: 0px 1px 1px #F2F1F0;
   font-size: 1.5em;
   position: relative;
   border-right-width: 0;
   margin: auto;
   padding: 24px !important;
-  background: #f4f4f4;
-  /* Old browsers */
 }
 @media only screen and (max-width: 995px) {
   [data-user-page] .wrapper .maintab-container ul.maintab li {
@@ -286,6 +396,12 @@ body {
   vertical-align: top;
   color: #333;
   background-color: #ede6e6;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-page] .wrapper #v-nav {
+    display: block;
+    width: 100%;
+  }
 }
 [data-user-page] .wrapper #v-nav div.tab-content {
   background-color: #edeaea;
@@ -860,6 +976,21 @@ body {
   box-sizing: border-box;
   padding: 1% 2%;
 }
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-page] .wrapper .aside-container {
+    display: block;
+    width: 100%;
+  }
+  [data-user-page] .wrapper .aside-container .recent-visit {
+    width: 100%;
+  }
+  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_img {
+    padding-right: 10px;
+  }
+  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details {
+    width: 80%;
+  }
+}
 [data-user-page] .wrapper .aside-container .recent-visit {
   min-height: 100%;
   display: inline-block;
@@ -883,18 +1014,12 @@ body {
   padding: 0px 0 15px;
 }
 [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_img {
-  width: 14%;
   padding-right: 10px;
 }
 [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details {
   display: inline-block;
   vertical-align: top;
   width: 60%;
-}
-@media only screen and (max-width: 850px) {
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details {
-    width: 40% !important;
-  }
 }
 [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h5,
 [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h6 {
@@ -920,352 +1045,4 @@ body {
 }
 [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .fav {
   width: 1rem;
-}
-@media only screen and (min-width: 1200px) {
-  [data-user-page] .wrapper .aside-container .recent-visit {
-    min-height: 100%;
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit.follow_list {
-    display: inline-block;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores {
-    margin-bottom: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .follow_header {
-    font-size: 15px;
-    text-align: left;
-    margin-bottom: 10%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div {
-    list-style-type: none;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div {
-    padding: 0px 0 15px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_img {
-    width: 14%;
-    padding-right: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details {
-    display: inline-block;
-    vertical-align: top;
-    width: 60%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h5,
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h6 {
-    margin: 0;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_name {
-    font-size: 10px;
-    font-weight: bolder;
-    height: 5px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_address {
-    font-size: 12px;
-    height: 25px;
-    word-wrap: break-word;
-    max-width: 155px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav {
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .rev {
-    width: 1rem;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .fav {
-    width: 1rem;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  [data-user-page] .wrapper .aside-container .recent-visit {
-    min-height: 100%;
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit.follow_list {
-    display: inline-block;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores {
-    margin-bottom: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .follow_header {
-    font-size: 15px;
-    text-align: left;
-    margin-bottom: 10%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div {
-    list-style-type: none;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div {
-    padding: 0px 0 15px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_img {
-    width: 14%;
-    padding-right: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details {
-    display: inline-block;
-    vertical-align: top;
-    width: 55%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h5,
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h6 {
-    margin: 0;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_name {
-    font-size: 10px;
-    font-weight: bolder;
-    height: 5px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_address {
-    font-size: 12px;
-    height: 25px;
-    word-wrap: break-word;
-    max-width: 155px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav {
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .rev {
-    width: 1rem;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .fav {
-    width: 1rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  [data-user-page] .wrapper .aside-container .recent-visit {
-    min-height: 100%;
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit.follow_list {
-    display: inline-block;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores {
-    margin-bottom: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .follow_header {
-    font-size: 15px;
-    text-align: left;
-    margin-bottom: 10%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div {
-    list-style-type: none;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div {
-    padding: 0px 0 15px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_img {
-    width: 14%;
-    padding-right: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details {
-    display: inline-block;
-    vertical-align: top;
-    width: 55%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h5,
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h6 {
-    margin: 0;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_name {
-    font-size: 10px;
-    font-weight: bolder;
-    height: 5px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_address {
-    font-size: 12px;
-    height: 25px;
-    word-wrap: break-word;
-    max-width: 155px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav {
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .rev {
-    width: 1rem;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .fav {
-    width: 1rem;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  [data-user-page] .wrapper .aside-container .recent-visit {
-    min-height: 100%;
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit.follow_list {
-    display: inline-block;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores {
-    margin-bottom: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .follow_header {
-    font-size: 15px;
-    text-align: left;
-    margin-bottom: 10%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div {
-    list-style-type: none;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div {
-    padding: 0px 0 15px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_img {
-    width: 14%;
-    padding-right: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details {
-    display: inline-block;
-    vertical-align: top;
-    width: 55%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h5,
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h6 {
-    margin: 0;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_name {
-    font-size: 10px;
-    font-weight: bolder;
-    height: 5px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_address {
-    font-size: 12px;
-    height: 25px;
-    word-wrap: break-word;
-    max-width: 155px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav {
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .rev {
-    width: 1rem;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .fav {
-    width: 1rem;
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-  [data-user-page] .wrapper .aside-container .recent-visit {
-    min-height: 100%;
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit.follow_list {
-    display: inline-block;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores {
-    margin-bottom: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .follow_header {
-    font-size: 15px;
-    text-align: left;
-    margin-bottom: 10%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div {
-    list-style-type: none;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div {
-    padding: 0px 0 15px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_img {
-    width: 14%;
-    padding-right: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details {
-    display: inline-block;
-    vertical-align: top;
-    width: 55%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h5,
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h6 {
-    margin: 0;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_name {
-    font-size: 10px;
-    font-weight: bolder;
-    height: 5px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_address {
-    font-size: 12px;
-    height: 25px;
-    word-wrap: break-word;
-    max-width: 155px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav {
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .rev {
-    width: 1rem;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .fav {
-    width: 1rem;
-  }
-}
-@media only screen and (min-width: 50px) and (max-width: 319px) {
-  [data-user-page] .wrapper .aside-container .recent-visit {
-    min-height: 100%;
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit.follow_list {
-    display: inline-block;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores {
-    margin-bottom: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .follow_header {
-    font-size: 15px;
-    text-align: left;
-    margin-bottom: 10%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div {
-    list-style-type: none;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div {
-    padding: 0px 0 15px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_img {
-    width: 14%;
-    padding-right: 10px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details {
-    display: inline-block;
-    vertical-align: top;
-    width: 55%;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h5,
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details h6 {
-    margin: 0;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_name {
-    font-size: 10px;
-    font-weight: bolder;
-    height: 5px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details .store_address {
-    font-size: 12px;
-    height: 25px;
-    word-wrap: break-word;
-    max-width: 155px;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav {
-    display: inline-block;
-    vertical-align: top;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .rev {
-    width: 1rem;
-  }
-  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .fav {
-    width: 1rem;
-  }
 }
