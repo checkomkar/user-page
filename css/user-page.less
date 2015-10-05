@@ -1,0 +1,1054 @@
+@import "font-awesome.min.css";
+@xs-vvvmin:50px;
+@xs-vvmin:240px;
+@xs-vmin: 320px;
+@xs-min: 480px;
+@sm-min: 768px;
+@md-min: 992px;
+@lg-min: 1200px;
+
+@xs-vvvmax: (@xs-vvmin - 1);
+@xs-vvmax: (@xs-vmin - 1);
+@xs-vmax: (@xs-min - 1);
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+
+
+///@vsmphone:        ~"only screen and (min-width: @{xs-vvmin})";/
+@vvsmphone:        ~"only screen and (min-width: @{xs-vvvmin}) and (max-width: @{xs-vvvmax})";
+@vsmphone:         ~"only screen and (min-width: @{xs-vvmin}) and (max-width: @{xs-vvmax})";
+@smphone:          ~"only screen and (min-width: @{xs-vmin}) and (max-width: @{xs-vmax})";
+@phone-strict:     ~"only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})";
+@tablet-strict:    ~"only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})";
+@desktop-strict:   ~"only screen and (min-width: @{md-min}) and (max-width: @{md-max})";
+@large:            ~"only screen and (min-width: @{lg-min})";
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.background-picture(@width, @pad-bottom){
+    width: @width;
+    box-sizing: border-box;
+    padding-bottom: @pad-bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+[data-user-page]{
+    hr.border-light {
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .no-bold{
+        font-weight: normal;
+    }
+
+    .container-fluid{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button{
+        padding: 5% 15%;
+        border: none;
+        background: none;
+        border-radius: 0;
+        font-size: 1.3em;
+        &.red{
+            background-color: red;
+            color: white;
+        }
+    }
+
+    .cover-container{
+        background-image: url(../images/banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 425px;
+        @media @desktop-strict {
+            min-height: 310px;
+        }
+        @media only screen and (max-width: 995px){
+            min-height: 250px;
+        }
+        .user-details-container{
+            box-sizing: border-box;
+            padding-top: 10%;
+            .user-details, .follow{
+                display: inline-block;
+                vertical-align: top;
+            }
+            .user-details{
+                width: 80%;
+                .profile-image, .details{
+                    display: inline-block;
+                    vertical-align: top;
+                }
+                .profile-image{
+                    width: 10%;
+                    box-sizing: border-box;
+                    padding-bottom: 10%;
+                    border: 3px solid white;
+                    background-color: darkgray;
+                    margin-right: 5%;
+                }
+                .details{
+                    h3{
+                        color: white;
+                        line-height: 1.8;
+                    }
+                }
+            }
+            .follow{
+                width: 19%;
+            }
+        }
+
+        @media only screen and (max-width: 375px){
+            min-height: 200px;
+            .user-details-container {
+                box-sizing: border-box;
+                padding: 10% 0;
+                text-align: center;
+                .user-details, .follow{
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                }
+                .user-details{
+                    text-align: center;
+                    .profile-image, .details{
+                        display: block;
+                        vertical-align: top;
+                    }
+                    .profile-image{
+                        width: 50%;
+                        box-sizing: border-box;
+                        padding-bottom: 50%;
+                        border: 3px solid white;
+                        border-radius: 50%;
+                        background-color: darkgray;
+                        margin: 0 auto;
+
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    @media only screen and (max-width: 375px){
+        .cover-container{
+
+        }
+    }
+
+
+    .tag-headings-container{
+        padding: 2%;
+        background-color: #e2e0e4;
+        border-bottom: 5px solid #33304a;
+        text-align: center;
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                list-style: none;
+                display: inline-block;
+                width: 10%;
+                color: #575757;
+                @media @desktop-strict {
+                    width: 15%;
+                }
+                @media only screen and (max-width: 995px){
+                    width: 18%;
+                }
+                @media only screen and (max-width: 675px){
+                    width: 19%;
+                }
+                h4{
+                    .icons{
+                        .background-picture(@width: 20px, @pad-bottom: 20px);
+                        color: #959595;
+                        img{
+                            width: 10%;
+                            padding-right: 5%;
+                        }
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 375px){
+            .container-fluid{
+                width: 100%;
+            }
+            ul{
+                li{
+                    h2{
+                        font-size: 16px;
+                    }
+                    h4{
+                        font-size: 11px;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+    .wrapper{
+        width: 90%;
+        margin: 0px auto;
+        min-height: 600px;
+        h1, h4, p, pre, ul, li{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            vertical-align: baseline;
+            background: transparent;
+        }
+        @media @tablet-strict {
+            width: 100%;
+        }
+
+        @media @desktop-strict {
+            width: 99%;
+        }
+
+        @media only screen and (max-width: 995px) {
+            width: 99%;
+        }
+
+        li{
+            outline: 0;
+            text-decoration: none;
+            -webkit-transition-property: background color;
+            -moz-transition-property: background color;
+            -o-transition-property: background color;
+            -ms-transition-property: background color;
+            transition-property: background color;
+            -webkit-transition-duration: 0.12s;
+            -moz-transition-duration: 0.12s;
+            -o-transition-duration: 0.12s;
+            -ms-transition-duration: 0.12s;
+            transition-duration: 0.12s;
+            -webkit-transition-timing-function: ease-out;
+            -moz-transition-timing-function: ease-out;
+            -o-transition-timing-function: ease-out;
+            -ms-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .maintab-container{
+            width: 20%;
+            display: inline-block;
+            vertical-align: top;
+            ul.maintab{
+                margin: 0;
+                padding: 0;
+                li{
+                    //width: 180px;
+                    list-style-type: none;
+                    display: block;
+                    text-shadow: 0px 1px 1px #F2F1F0;
+                    font-size: 1.5em;
+                    position: relative;
+                    border-right-width: 0;
+                    //border-bottom: 1px solid #DDD;
+                    margin: auto;
+                    padding: 24px !important;
+                    background: #f4f4f4; /* Old browsers */
+                    @media only screen and (max-width: 995px){
+                        font-size: 1.2em;
+                    }
+
+                    @media only screen and (max-width: 675px){
+                        font-size: 1em;
+                    }
+                    i{
+                        padding-right: 20px;
+                    }
+                    .icon{
+                        width: 20px;
+                        height: 18px;
+                        margin-right: 10px;
+                        @media only screen and (max-width: 675px){
+                            width: 14px;
+                            height: 14px;
+                        }
+                    }
+                    .activity{
+                        //background: url(../images/activity-icon.png) no-repeat;
+                        background-size: contain;
+                        padding-right: 22px;
+                        margin: 10px 10px 0px 0px;
+                    }
+
+                }
+                li.current{
+                    color: black;
+                    border-right: none;
+                    z-index: 10;
+                    background: #edeaea;
+                    position: relative;
+                    background-image: url(../images/arrow-icon.png);
+                    background-position: left;
+                    background-repeat: no-repeat;
+                    background-size: 10px;
+                }
+
+                li.first.current{
+                    //border-bottom: 1px solid #DDD;
+                }
+                li.last{
+                    border-bottom: none;
+                }
+            }
+        }
+
+        #v-nav{
+            height: 100%;
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            color: #333;
+            //font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+            background-color: #ede6e6;
+
+
+            div.tab-content{
+
+                //border: 1px solid #ddd;
+                background-color: #edeaea;
+                min-height: 400px;
+                position: relative;
+                z-index: 9;
+                display: none;
+                h4{
+                    font-size: 1.2em;
+                    color: Black;
+                    text-shadow: 0px 1px 1px #F2F1F0;
+                    border-bottom: 1px dotted #EEEDED;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                }
+
+                .inside-tabs{
+                    width:100%;
+                    display:inline-block;
+                    .tab-links{
+                        display: inline-block;
+                        &:after{
+                            display:block;
+                            clear:both;
+                            content:'';
+                        }
+                        li{
+                            margin: 0;
+                            float: left;
+                            list-style: none;
+                            padding: 15px 30px;
+                            @media @desktop-strict {
+                                padding: 15px 25px;
+                            }
+
+                            @media @tablet-strict{
+                                padding: 15px 20px;
+                            }
+
+                            @media only screen and (max-width: 995px){
+                                padding: 7px;
+                            }
+                            &:first-of-type{
+                                margin-left: 0;
+                            }
+                            &.active{
+                                background-color: #fff;
+                                border-radius-top: 76px;
+                                border-top-left-radius: 8px;
+                                border-top-right-radius: 8px;
+                                border-top: 4px solid #e94643;
+                                a{
+                                    background:#fff;
+                                    color:#4c4c4c;
+                                    &:hover{
+                                        background:#fff;
+                                        color:#4c4c4c;
+                                    }
+                                }
+                            }
+                        }
+                        a{
+                            padding:9px 15px;
+                            display:inline-block;
+                            border-radius:3px 3px 0px 0px;
+                            //background:#7FB5DA;
+                            text-decoration: none;
+                            font-size:16px;
+                            font-weight:600;
+                            color:#4c4c4c;
+                            transition:all linear 0.15s;
+                            &:hover{
+                                //background:#a7cce5;
+                                text-decoration:none;
+                            }
+                            @media only screen and (max-width: 995px){
+                                padding: 9px 9px;
+                            }
+                        }
+                    }
+
+                    .tab-content-child{
+                        padding: 10px 0px 15px 0px;
+                        background:#fff;
+                        margin-top: -5px;
+                        .tab{
+                            display:none;
+                        }
+                        .tab{
+                            .activity-section, .favourites-section, .wishlist-section, .followers-section{
+                                width: 100%;
+                                .section-icon, .section-content{
+                                    display: inline-block;
+                                }
+                                .section-icon{
+                                    width: 6.5%;
+                                    height: 50px;
+                                    vertical-align: top;
+                                    margin: 2.5% 1.7%;
+                                    &.review-icon{
+                                        background: url(../images/fountain-pen.png) no-repeat;
+                                        background-size: contain;
+                                    }
+                                    &.favourites-icon{
+                                        background: url(../images/favourites-icon.png) no-repeat;
+                                        background-size: contain;
+                                    }
+                                    &.wishlist-icon{
+                                        background: url(../images/wishlist-icon.png) no-repeat;
+                                        background-size: contain;
+                                    }
+                                    &.followers-icon{
+                                        background: url(../images/wishlist-icon.png) no-repeat;
+                                        background-size: contain;
+                                    }
+                                }
+
+                                .section-content{
+                                    background: #f7f7f7;
+                                    width: 89%;
+                                    box-sizing: border-box;
+                                    padding: 10px;
+                                    margin-bottom: 10px;
+                                    @media only screen and (max-width: 675px){
+                                        width: 88%;
+                                    }
+                                    .general-container{
+                                        width: 100%;
+                                        margin-bottom: 3%;
+                                        .image, .general-content{
+                                            display: inline-block;
+                                            background-repeat: no-repeat;
+                                        }
+                                        .image{
+                                            width: 10%;
+                                            margin-right: 2%;
+                                        }
+                                        .general-content{
+                                            width: 80%;
+                                        }
+                                        p{
+                                            margin: 20px 0;
+                                            @media only screen and (max-width: 675px){
+                                                font-size: 11px;
+                                                letter-spacing: 1px;
+                                                line-height: 1.5;
+                                            }
+                                            @media only screen and (max-width: 850px){
+                                                font-size: 11px;
+                                                letter-spacing: 1px;
+                                                line-height: 1.5;
+                                            }
+                                        }
+                                        .like-comment-container{
+                                            .like_section{
+                                                img{
+                                                    width: 10px;
+                                                    height: 10px;
+                                                    margin-right: 15px;
+                                                    &:nth-of-type(1){
+                                                        margin-left: 15px;
+                                                    }
+                                                }
+                                                a{
+                                                    color: gray;
+                                                    text-decoration: none;
+                                                }
+                                            }
+                                            .comment_section{
+                                                margin-top:20px;
+                                                .user_img{
+                                                    float:left;
+                                                    img{
+                                                        width:32px;
+                                                        height:32px;
+                                                        border-radius: 50%;
+                                                    }
+                                                }
+                                                .comment_box{
+                                                    text-align: center;
+                                                }
+                                                .user_comment {
+                                                    width: 80%;
+                                                    height: 25px;
+                                                    border-radius: 5px;
+                                                    border: 1px solid wheat;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.review, &.favourites, &.wishlist, &.followers{
+                                        @media only screen and (max-width: 675px){
+                                            h2{
+                                                margin: 10px 0;
+                                                font-size: 16px;
+                                            }
+                                        }
+                                        @media only screen and (max-width: 850px){
+                                            h2{
+                                                margin: 10px 0;
+                                                font-size: 16px;
+                                            }
+                                        }
+                                        .image{
+                                            background-size: contain;
+                                            width: 45px;
+                                            box-sizing: border-box;
+                                            padding-bottom: 45px;
+                                            vertical-align: bottom;
+                                            @media only screen and (max-width: 675px){
+                                                width: 41px;
+                                            }
+                                        }
+                                        .general-content{
+                                            h3{
+                                                margin-top: 0;
+                                                margin-bottom: 0;
+                                                b{
+                                                    &.pink{
+                                                        color: #ee747b;
+                                                    }
+                                                }
+                                                span{
+                                                    font-weight: normal;
+                                                    margin-top: 10px;
+                                                    display: inline-block;
+                                                }
+
+                                                @media only screen and (max-width: 675px) {
+                                                    font-size: 13px;
+                                                }
+                                                @media only screen and (max-width: 850px) {
+                                                    font-size: 13px;
+                                                }
+                                            }
+
+                                            .image-strip{
+                                                ul{
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    li{
+                                                        list-style: none;
+                                                        float: left;
+                                                        margin-right: 5px;
+                                                        margin-top: 10px;
+                                                        background-repeat: no-repeat;
+                                                        background-size: contain;
+                                                        width: 150px;
+                                                        box-sizing: border-box;
+                                                        padding-bottom: 150px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        h3{
+                                            &.you-added-text{
+                                                font-weight: normal;
+                                            }
+                                        }
+                                    }
+                                    &.favourites{
+                                        .image{
+                                            width: 60px;
+                                            padding-bottom: 60px;
+                                            @media only screen and (max-width: 675px){
+                                                width: 40px;
+                                                padding-bottom: 40px;
+                                            }
+                                            @media only screen and (max-width: 850px){
+                                                width: 40px;
+                                                padding-bottom: 40px;
+                                            }
+                                        }
+
+                                    }
+                                    &.wishlist{
+
+                                    }
+                                    &.followers{
+                                        margin: 0;
+                                        .general-container{
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .active{
+                            display:block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .third-section{
+            display: inline-block;
+            width: 10%;
+            background: red;
+            min-height: 1000px;
+        }
+
+
+        .aside-container{
+            display: inline-block;
+            width: 25%;
+            vertical-align: top;
+            box-sizing: border-box;
+            padding: 1% 2%;
+            .recent-visit{
+                min-height: 100%;
+                display: inline-block;
+                vertical-align: top;
+                &.follow_list{
+                    display: inline-block;
+                }
+                .vis_stores{
+                    margin-bottom: 10px;
+                    .follow_header{
+                        font-size: 15px;
+                        text-align: left;
+                        margin-bottom: 10%;
+                    }
+                    .vis_stores_div{
+                        list-style-type: none;
+                        div{
+                            padding: 0px 0 15px;
+                            .store_img{
+                                width: 14%;
+                                padding-right: 10px;
+                            }
+                            .store_details{
+                                display: inline-block;
+                                vertical-align: top;
+                                width: 60%;
+                                @media only screen and (max-width: 850px) {
+                                    width: 40% !important;
+                                }
+                                h5, h6{
+                                    margin: 0;
+                                }
+                                .store_name{
+                                    font-size: 10px;
+                                    font-weight: bolder;
+                                    height: 5px
+                                }
+                                .store_address{
+                                    font-size: 12px;
+                                    height: 25px;
+                                    word-wrap: break-word;
+                                    max-width: 155px;
+                                }
+                            }
+                            .rev_fav{
+                                display: inline-block;
+                                vertical-align: top;
+                                .rev{
+                                    width: 1rem;
+                                    //vertical-align: top
+                                }
+                                .fav{
+                                    width: 1rem;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+
+
+                @media @large {
+                    min-height: 100%;
+                    display: inline-block;
+                    vertical-align: top;
+                    &.follow_list{
+                        display: inline-block;
+                    }
+                    .vis_stores{
+                        margin-bottom: 10px;
+                        .follow_header{
+                            font-size: 15px;
+                            text-align: left;
+                            margin-bottom: 10%;
+                        }
+                        .vis_stores_div{
+                            list-style-type: none;
+                            div{
+                                padding: 0px 0 15px;
+                                .store_img{
+                                    width: 14%;
+                                    padding-right: 10px;
+                                }
+                                .store_details{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    width: 60%;
+                                    h5, h6{
+                                        margin: 0;
+                                    }
+                                    .store_name{
+                                        font-size: 10px;
+                                        font-weight: bolder;
+                                        height: 5px
+                                    }
+                                    .store_address{
+                                        font-size: 12px;
+                                        height: 25px;
+                                        word-wrap: break-word;
+                                        max-width: 155px;
+                                    }
+                                }
+                                .rev_fav{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    .rev{
+                                        width: 1rem;
+                                        //vertical-align: top
+                                    }
+                                    .fav{
+                                        width: 1rem;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+                @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                    min-height: 100%;
+                    display: inline-block;
+                    vertical-align: top;
+                    &.follow_list{
+                        display: inline-block;
+                    }
+                    .vis_stores{
+                        margin-bottom: 10px;
+                        .follow_header{
+                            font-size: 15px;
+                            text-align: left;
+                            margin-bottom: 10%;
+                        }
+                        .vis_stores_div{
+                            list-style-type: none;
+                            div{
+                                padding: 0px 0 15px;
+                                .store_img{
+                                    width: 14%;
+                                    padding-right: 10px;
+                                }
+                                .store_details{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    width: 55%;
+                                    h5, h6{
+                                        margin: 0;
+                                    }
+                                    .store_name{
+                                        font-size: 10px;
+                                        font-weight: bolder;
+                                        height: 5px
+                                    }
+                                    .store_address{
+                                        font-size: 12px;
+                                        height: 25px;
+                                        word-wrap: break-word;
+                                        max-width: 155px;
+                                    }
+                                }
+                                .rev_fav{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    .rev{
+                                        width: 1rem;
+                                        //vertical-align: top
+                                    }
+                                    .fav{
+                                        width: 1rem;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+                @media only screen and (min-width: 768px) and (max-width: 991px) {
+                    min-height: 100%;
+                    display: inline-block;
+                    vertical-align: top;
+                    &.follow_list{
+                        display: inline-block;
+                    }
+                    .vis_stores{
+                        margin-bottom: 10px;
+                        .follow_header{
+                            font-size: 15px;
+                            text-align: left;
+                            margin-bottom: 10%;
+                        }
+                        .vis_stores_div{
+                            list-style-type: none;
+                            div{
+                                padding: 0px 0 15px;
+                                .store_img{
+                                    width: 14%;
+                                    padding-right: 10px;
+                                }
+                                .store_details{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    width: 55%;
+                                    h5, h6{
+                                        margin: 0;
+                                    }
+                                    .store_name{
+                                        font-size: 10px;
+                                        font-weight: bolder;
+                                        height: 5px
+                                    }
+                                    .store_address{
+                                        font-size: 12px;
+                                        height: 25px;
+                                        word-wrap: break-word;
+                                        max-width: 155px;
+                                    }
+                                }
+                                .rev_fav{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    .rev{
+                                        width: 1rem;
+                                        //vertical-align: top
+                                    }
+                                    .fav{
+                                        width: 1rem;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+                @media only screen and (min-width: 480px) and (max-width: 767px) {
+
+                    min-height: 100%;
+                    display: inline-block;
+                    vertical-align: top;
+                    &.follow_list{
+                        display: inline-block;
+                    }
+                    .vis_stores{
+                        margin-bottom: 10px;
+                        .follow_header{
+                            font-size: 15px;
+                            text-align: left;
+                            margin-bottom: 10%;
+                        }
+                        .vis_stores_div{
+                            list-style-type: none;
+                            div{
+                                padding: 0px 0 15px;
+                                .store_img{
+                                    width: 14%;
+                                    padding-right: 10px;
+                                }
+                                .store_details{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    width: 55%;
+                                    h5, h6{
+                                        margin: 0;
+                                    }
+                                    .store_name{
+                                        font-size: 10px;
+                                        font-weight: bolder;
+                                        height: 5px
+                                    }
+                                    .store_address{
+                                        font-size: 12px;
+                                        height: 25px;
+                                        word-wrap: break-word;
+                                        max-width: 155px;
+                                    }
+                                }
+                                .rev_fav{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    .rev{
+                                        width: 1rem;
+                                        //vertical-align: top
+                                    }
+                                    .fav{
+                                        width: 1rem;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+                @media only screen and (min-width: 320px) and (max-width: 479px) {
+
+                    min-height: 100%;
+                    display: inline-block;
+                    vertical-align: top;
+                    &.follow_list{
+                        display: inline-block;
+                    }
+                    .vis_stores{
+                        margin-bottom: 10px;
+                        .follow_header{
+                            font-size: 15px;
+                            text-align: left;
+                            margin-bottom: 10%;
+                        }
+                        .vis_stores_div{
+                            list-style-type: none;
+                            div{
+                                padding: 0px 0 15px;
+                                .store_img{
+                                    width: 14%;
+                                    padding-right: 10px;
+                                }
+                                .store_details{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    width: 55%;
+                                    h5, h6{
+                                        margin: 0;
+                                    }
+                                    .store_name{
+                                        font-size: 10px;
+                                        font-weight: bolder;
+                                        height: 5px
+                                    }
+                                    .store_address{
+                                        font-size: 12px;
+                                        height: 25px;
+                                        word-wrap: break-word;
+                                        max-width: 155px;
+                                    }
+                                }
+                                .rev_fav{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    .rev{
+                                        width: 1rem;
+                                        //vertical-align: top
+                                    }
+                                    .fav{
+                                        width: 1rem;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+                @media only screen and (min-width: 50px) and (max-width: 319px) {
+
+                    min-height: 100%;
+                    display: inline-block;
+                    vertical-align: top;
+                    &.follow_list{
+                        display: inline-block;
+                    }
+                    .vis_stores{
+                        margin-bottom: 10px;
+                        .follow_header{
+                            font-size: 15px;
+                            text-align: left;
+                            margin-bottom: 10%;
+                        }
+                        .vis_stores_div{
+                            list-style-type: none;
+                            div{
+                                padding: 0px 0 15px;
+                                .store_img{
+                                    width: 14%;
+                                    padding-right: 10px;
+                                }
+                                .store_details{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    width: 55%;
+                                    h5, h6{
+                                        margin: 0;
+                                    }
+                                    .store_name{
+                                        font-size: 10px;
+                                        font-weight: bolder;
+                                        height: 5px
+                                    }
+                                    .store_address{
+                                        font-size: 12px;
+                                        height: 25px;
+                                        word-wrap: break-word;
+                                        max-width: 155px;
+                                    }
+                                }
+                                .rev_fav{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    .rev{
+                                        width: 1rem;
+                                        //vertical-align: top
+                                    }
+                                    .fav{
+                                        width: 1rem;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+
+}
+
+
+
