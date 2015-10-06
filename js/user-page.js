@@ -67,6 +67,7 @@ $(function () {
     var $clickToHide = $('[data-click-to-hide]');
     var $currWindowHeight = $( window ).height();
     var $vtabHeight = $('#v-nav').height();
+    var $tabChildHeight = $('.tab-content-child').height();
 
     //$(window).on('click',  function (e){
     //    if (!$container.is(e.target) && !$trigger.is(e.target) // if the target of the click isn't the container...
@@ -98,6 +99,7 @@ $(function () {
     });
     $clickToHide.height($currWindowHeight);
     $('[data-tab-target] ul').height($currWindowHeight);
+    $('[data-side-line]').height($tabChildHeight);
     $('.maintab').height($vtabHeight);
 
 

@@ -1,4 +1,5 @@
 @import "font-awesome.min.css";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
 @xs-vvvmin:50px;
 @xs-vvmin:240px;
 @xs-vmin: 320px;
@@ -29,6 +30,9 @@ body{
     padding: 0;
     font-family: "Open Sans";
     background: #ede6e6;
+    p{
+        font-size: 0.8em;
+    }
 }
 
 .background-picture(@width, @pad-bottom){
@@ -326,7 +330,7 @@ body{
                     list-style-type: none;
                     display: block;
                     //text-shadow: 0px 1px 1px #F2F1F0;
-                    font-size: 1.5em;
+                    font-size: 1.2em;
                     position: relative;
                     border-right-width: 0;
                     //border-bottom: 1px solid #DDD;
@@ -414,7 +418,7 @@ body{
                     list-style-type: none;
                     display: block;
                     //text-shadow: 0px 1px 1px #F2F1F0;
-                    font-size: 1.5em;
+                    font-size: 1.2em;
                     position: relative;
                     border-right-width: 0;
                     //border-bottom: 1px solid #DDD;
@@ -529,6 +533,9 @@ body{
 
                             @media only screen and (max-width: 995px){
                                 padding: 7px;
+                                a{
+                                    font-size: 0.8em;
+                                }
                             }
                             &:first-of-type{
                                 margin-left: 0;
@@ -588,6 +595,7 @@ body{
                                     height: 50px;
                                     vertical-align: top;
                                     margin: 2.5% 1.7%;
+                                    position: relative;
                                     &.review-icon{
                                         background: url(../images/fountain-pen.png) no-repeat;
                                         background-size: contain;
@@ -643,7 +651,19 @@ body{
                                                 line-height: 1.5;
                                             }
                                         }
+                                        .image-list{
+                                            section{
+                                                display: inline-block;
+                                                width: 100px;
+                                                box-sizing: border-box;
+                                                padding-bottom: 100px;
+                                                margin-right: 10px;
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                            }
+                                        }
                                         .like-comment-container{
+                                            margin-top: 20px;
                                             .like_section{
                                                 img{
                                                     width: 10px;
@@ -695,9 +715,9 @@ body{
                                         }
                                         .image{
                                             background-size: contain;
-                                            width: 45px;
+                                            width: 50px;
                                             box-sizing: border-box;
-                                            padding-bottom: 45px;
+                                            padding-bottom: 53px;
                                             vertical-align: bottom;
                                             @media only screen and (max-width: 675px){
                                                 width: 41px;
@@ -707,6 +727,7 @@ body{
                                             h3{
                                                 margin-top: 0;
                                                 margin-bottom: 0;
+                                                font-size: 1em;
                                                 b{
                                                     &.pink{
                                                         color: #ee747b;
@@ -746,6 +767,7 @@ body{
                                         }
                                         h3{
                                             &.you-added-text{
+                                                font-size: 1em;
                                                 font-weight: normal;
                                             }
                                         }
@@ -774,6 +796,24 @@ body{
                                             margin: 0;
                                         }
                                     }
+                                }
+                            }
+                            .activity-section{
+                                position: relative;
+                                .side-line{
+                                    position: absolute;
+                                    left: 0px;
+                                    top: 0px;
+                                    width: 3.5%;
+                                    margin-left: 3.25%;
+                                    border-top: 3px solid #f5f1f1;
+                                    border-bottom: 3px solid #f5f1f1;
+                                    background-repeat: repeat-y;
+                                    background-position: center top;
+                                    z-index: 0;
+                                    min-height: 100%;
+                                    background-size: 3px auto;
+                                    background-image: url(../images/line-strip.png);
                                 }
                             }
                         }

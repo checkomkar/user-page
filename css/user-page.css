@@ -1,9 +1,13 @@
 @import "font-awesome.min.css";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
 body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans";
   background: #ede6e6;
+}
+body p {
+  font-size: 0.8em;
 }
 [data-user-page] hr.border-light {
   border: 0;
@@ -310,7 +314,7 @@ body {
 [data-user-page] .wrapper [data-tab-target] ul.maintab li {
   list-style-type: none;
   display: block;
-  font-size: 1.5em;
+  font-size: 1.2em;
   position: relative;
   border-right-width: 0;
   margin: auto;
@@ -394,7 +398,7 @@ body {
 [data-user-page] .wrapper .maintab-container ul.maintab li {
   list-style-type: none;
   display: block;
-  font-size: 1.5em;
+  font-size: 1.2em;
   position: relative;
   border-right-width: 0;
   margin: auto;
@@ -505,6 +509,9 @@ body {
   [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li {
     padding: 7px;
   }
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li a {
+    font-size: 0.8em;
+  }
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li:first-of-type {
   margin-left: 0;
@@ -575,6 +582,7 @@ body {
   height: 50px;
   vertical-align: top;
   margin: 2.5% 1.7%;
+  position: relative;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-icon.review-icon,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-icon.review-icon,
@@ -679,6 +687,24 @@ body {
     letter-spacing: 1px;
     line-height: 1.5;
   }
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .image-list section,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .image-list section,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .image-list section,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .image-list section {
+  display: inline-block;
+  width: 100px;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container {
+  margin-top: 20px;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section img,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section img,
@@ -795,9 +821,9 @@ body {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content.followers .image,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content.followers .image {
   background-size: contain;
-  width: 45px;
+  width: 50px;
   box-sizing: border-box;
-  padding-bottom: 45px;
+  padding-bottom: 53px;
   vertical-align: bottom;
 }
 @media only screen and (max-width: 675px) {
@@ -838,6 +864,7 @@ body {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content.followers .general-content h3 {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 1em;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content.review .general-content h3 b.pink,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content.review .general-content h3 b.pink,
@@ -978,6 +1005,7 @@ body {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content.followers h3.you-added-text,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content.followers h3.you-added-text,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content.followers h3.you-added-text {
+  font-size: 1em;
   font-weight: normal;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content.favourites .image,
@@ -1016,6 +1044,24 @@ body {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content.followers .general-container,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content.followers .general-container {
   margin: 0;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section {
+  position: relative;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .side-line {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 3.5%;
+  margin-left: 3.25%;
+  border-top: 3px solid #f5f1f1;
+  border-bottom: 3px solid #f5f1f1;
+  background-repeat: repeat-y;
+  background-position: center top;
+  z-index: 0;
+  min-height: 100%;
+  background-size: 3px auto;
+  background-image: url(../images/line-strip.png);
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .active {
   display: block;
