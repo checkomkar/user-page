@@ -1,4 +1,5 @@
 $(function () {
+    var $this = $(this);
     var items = $('.maintab-container>ul>li').each(function () {
         $(this).click(function () {
             //remove previous class and add it to clicked tab
@@ -11,6 +12,8 @@ $(function () {
             window.location.hash = $(this).attr('tab');
         });
     });
+
+
 
     var $itemsMobile = $('[data-tab-target]>ul>li').each(function () {
         $(this).click(function () {
@@ -61,14 +64,15 @@ $(function () {
     var $container = $('[data-tab-target]');
     var $trigger = $('[data-tab-trigger]');
     var $tabLinks = $('[data-tabs-links]');
+    var $clickToHide = $('[data-click-to-hide]');
+    var $currWindowHeight = $( window ).height();
+    var $vtabHeight = $('#v-nav').height();
 
-    //$(this).on('click',  function (e){
-    //
-    //
-    //    if (!container.is(e.target) && !trigger.is(e.target) // if the target of the click isn't the container...
-    //        && (container.has(e.target).length === 0) && (trigger.has(e.target).length === 0)) // ... nor a descendant of the container
+    //$(window).on('click',  function (e){
+    //    if (!$container.is(e.target) && !$trigger.is(e.target) // if the target of the click isn't the container...
+    //        && ($container.has(e.target).length === 0) && ($trigger.has(e.target).length === 0)) // ... nor a descendant of the container
     //    {
-    //        container.hide();
+    //        $container.animate({'left':'-100%'});
     //    }
     //});
 
@@ -84,8 +88,17 @@ $(function () {
         $('.sideMenuHideArea').css('background','transparent');
         $container.animate({'left':'-100%'});
         $container.data('shown','0');
-        
+
     });
+
+    $clickToHide.on('click', function(e){
+        console.log('hiya');
+        $container.animate({'left':'-100%'});
+        $container.data('shown','0');
+    });
+    $clickToHide.height($currWindowHeight);
+    $('[data-tab-target] ul').height($currWindowHeight);
+    $('.maintab').height($vtabHeight);
 
 
 

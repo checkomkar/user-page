@@ -27,6 +27,8 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: "Open Sans";
+    background: #ede6e6;
 }
 
 .background-picture(@width, @pad-bottom){
@@ -57,8 +59,9 @@ body{
         padding: 5% 15%;
         border: none;
         background: none;
-        border-radius: 0;
+        border-radius: 2px;
         font-size: 1.3em;
+        cursor: pointer;
         &.red{
             background-color: red;
             color: white;
@@ -69,7 +72,7 @@ body{
         background-image: url(../images/banner.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 425px;
+        min-height: 320px;
         @media @desktop-strict {
             min-height: 310px;
         }
@@ -78,7 +81,7 @@ body{
         }
         .user-details-container{
             box-sizing: border-box;
-            padding-top: 10%;
+            padding: 7%;
             .user-details, .follow{
                 display: inline-block;
                 vertical-align: top;
@@ -90,22 +93,41 @@ body{
                     vertical-align: top;
                 }
                 .profile-image{
-                    width: 10%;
+                    width: 13%;
                     box-sizing: border-box;
-                    padding-bottom: 10%;
+                    padding-bottom: 13%;
                     border: 3px solid white;
                     background-color: darkgray;
                     margin-right: 5%;
+                    border-radius: 2px;
+                    @media @desktop-strict{
+                        width: 17%;
+                        padding-bottom: 17%;
+                    }
+                    @media @tablet-strict{
+                        width: 100px;
+                        padding-bottom: 100px;
+                    }
                 }
                 .details{
+                    color: white;
+                    h3,h2,h4,h5{
+                        color: white;
+                        margin: 3px 0;
+                    }
+                    p{
+                        margin: 10px 0;
+                        font-size: 0.8em;
+                    }
                     h3{
                         color: white;
-                        line-height: 1.8;
+                        line-height: 1.5;
                     }
                 }
             }
             .follow{
                 width: 19%;
+                margin-top: 2%;
             }
         }
 
@@ -122,6 +144,7 @@ body{
                 }
                 .user-details{
                     text-align: center;
+                    margin-bottom: 30px;
                     .profile-image, .details{
                         display: block;
                         vertical-align: top;
@@ -133,7 +156,7 @@ body{
                         border: 3px solid white;
                         border-radius: 50%;
                         background-color: darkgray;
-                        margin: 0 auto;
+                        margin: 20px auto;
 
                     }
                 }
@@ -158,10 +181,27 @@ body{
 
 
     .tag-headings-container{
-        padding: 2%;
+        padding: 1%;
         background-color: #e2e0e4;
         border-bottom: 5px solid #33304a;
         text-align: center;
+        article{
+            color: #575757;
+            text-align: center;
+            section{
+                display: inline-block;
+                padding: 0 3%;
+                p{
+                    .icons{
+                        margin-right: 5px;
+                        img{
+                            width: 10px;
+                        }
+
+                    }
+                }
+            }
+        }
         ul{
             margin: 0;
             padding: 0;
@@ -264,11 +304,18 @@ body{
                 z-index: 1000;
                 ul.maintab{
                     background: transparent;
-                    width: 75%;
+                    width: 70%;
+                    display: inline-block;
+                    background: rgba(0,0,0,0.9);
                     li{
                         color: white;
-                        background: rgba(0,0,0,0.9);
+
                     }
+                }
+                .click-to-hide{
+                    width: 100%;
+                    display: inline-block;
+                    background: none repeat;
                 }
             }
             ul.maintab{
@@ -339,7 +386,7 @@ body{
             width: 20%;
             display: inline-block;
             vertical-align: top;
-        
+            margin: 0 -4px 0 0;
             @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
                 display: none;
                 width: 75%;
@@ -361,6 +408,7 @@ body{
             ul.maintab{
                 margin: 0;
                 padding: 0;
+                background: #f4f4f4;
                 li{
                     //width: 180px;
                     list-style-type: none;
@@ -458,6 +506,7 @@ body{
                 .inside-tabs{
                     width:100%;
                     display:inline-block;
+                    background-color: #ede6e6;
                     .tab-links{
                         display: inline-block;
                         &:after{
@@ -524,6 +573,7 @@ body{
                         padding: 10px 0px 15px 0px;
                         background:#fff;
                         margin-top: -5px;
+                        border-radius: 0 2px 2px 0px;
                         .tab{
                             display:none;
                         }
@@ -558,10 +608,11 @@ body{
 
                                 .section-content{
                                     background: #f7f7f7;
-                                    width: 89%;
+                                    width: 88%;
                                     box-sizing: border-box;
                                     padding: 10px;
                                     margin-bottom: 10px;
+                                    border-radius: 2px;
                                     @media only screen and (max-width: 675px){
                                         width: 88%;
                                     }
@@ -754,19 +805,28 @@ body{
                 .recent-visit{
                     width: 100%;
                     .vis_stores{
+                        box-sizing: border-box;
+                        padding: 10%;
                         .vis_stores_div{
                             div{
                                 .store_img{
                                     padding-right: 10px;
                                 }
                                 .store_details{
-                                    width: 80%;
+                                    width: 50% !important;
                                 }
                             }
                         }
                     }
                 }
             }
+
+            @media @desktop-strict, @tablet-strict{
+                .store_details{
+                    width: 50% !important;
+                }
+            }
+
             .recent-visit{
                 min-height: 100%;
                 display: inline-block;
@@ -792,7 +852,8 @@ body{
                             .store_details{
                                 display: inline-block;
                                 vertical-align: top;
-                                width: 60%;
+                                width: 55%;
+
                                 h5, h6{
                                     margin: 0;
                                 }
