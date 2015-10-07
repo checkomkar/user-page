@@ -1,5 +1,6 @@
 @import "font-awesome.min.css";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+/*START: user-page.less*/
 body {
   margin: 0;
   padding: 0;
@@ -37,6 +38,11 @@ body p {
 [data-user-page] .button.button-default {
   padding: 0.5em 2em;
   font-size: 1.3em;
+  border-radius: 2px;
+}
+[data-user-page] .button.button-md {
+  padding: 0.3em 1em;
+  font-size: 1.2em;
   border-radius: 2px;
 }
 [data-user-page] .button.button-sm {
@@ -193,7 +199,7 @@ body p {
     box-sizing: border-box;
     padding-bottom: 50%;
     border: 3px solid white;
-    border-radius: 50%;
+    border-radius: 2px;
     background-color: darkgray;
     margin: 20px auto;
   }
@@ -270,6 +276,9 @@ body p {
   padding-right: 5%;
 }
 @media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-page] .tag-headings-container {
+    display: none;
+  }
   [data-user-page] .tag-headings-container .container-fluid {
     width: 100%;
   }
@@ -565,8 +574,6 @@ body p {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li.active {
   background-color: #fff;
   border-radius-top: 76px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
   border-top: 4px solid #e94643;
 }
 @media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
@@ -848,6 +855,62 @@ body p {
     margin: 0 0px;
   }
 }
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .show-comments-container a,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .show-comments-container a,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .show-comments-container a,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .show-comments-container a {
+  text-decoration: none;
+  color: #333;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .show-comments-container a:hover,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .show-comments-container a:hover,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .show-comments-container a:hover,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .show-comments-container a:hover {
+  color: #000000;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections {
+  width: 100%;
+  min-height: 20px;
+  overflow: hidden;
+  padding: 5px 0px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_img,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_img,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_img,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_img {
+  float: left;
+  margin-right: 40px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_img a img,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_img a img,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_img a img,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_img a img {
+  width: 32px;
+  height: 32px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment {
+  text-align: left;
+  margin-left: 40px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment .profile_name,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment .profile_name,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment .profile_name,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment .profile_name {
+  font-weight: 900;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment .profile_comment_content,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment .profile_comment_content,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment .profile_comment_content,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .show-comments-container .comment_box_collections .profile_comment .profile_comment_content {
+  margin-left: 10px;
+  word-break: break-all;
+}
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .comment_section,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .comment_section,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .comment_section,
@@ -984,7 +1047,7 @@ body p {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content.followers .general-content h3,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content.followers .general-content h3 {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   font-size: 1em;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content.review .general-content h3 b.pink,
