@@ -23,17 +23,59 @@ body p {
   margin-left: auto;
   margin-right: auto;
 }
+[data-user-page] .visible-lg {
+  display: inline-block;
+}
+[data-user-page] .visible-sm {
+  display: none;
+}
 [data-user-page] .button {
-  padding: 5% 15%;
   border: none;
   background: none;
-  border-radius: 2px;
-  font-size: 1.3em;
   cursor: pointer;
+}
+[data-user-page] .button.button-default {
+  padding: 0.5em 2em;
+  font-size: 1.3em;
+  border-radius: 2px;
+}
+[data-user-page] .button.button-sm {
+  padding: 0.3em 1em;
+  font-size: 1em;
+  border-radius: 2px;
+}
+[data-user-page] .button.button-round {
+  padding: 20px;
+  border-radius: 50%;
 }
 [data-user-page] .button.red {
   background-color: red;
   color: white;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-page] .visible-lg {
+    display: none;
+  }
+  [data-user-page] .visible-sm {
+    display: inline-block;
+  }
+  [data-user-page] .button-d-sm {
+    border: none;
+    background: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5%;
+  }
+  [data-user-page] .button-d-sm i {
+    font-size: 1.6em;
+  }
+  [data-user-page] .button-d-sm.red {
+    background-color: red;
+    color: white;
+  }
+}
+[data-user-page] .clear-fix {
+  clear: both;
 }
 [data-user-page] .cover-container {
   background-image: url(../images/banner.jpg);
@@ -107,9 +149,20 @@ body p {
   color: white;
   line-height: 1.5;
 }
+[data-user-page] .cover-container .user-details-container .user-details .user-follow {
+  margin: 3% 0px 0px;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-page] .cover-container .user-details-container .user-details .user-follow {
+    margin: 10% 0px 0px;
+  }
+}
 [data-user-page] .cover-container .user-details-container .follow {
   width: 19%;
   margin-top: 2%;
+}
+[data-user-page] .cover-container .user-details-container .follow i {
+  font-size: 1.2em;
 }
 @media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   [data-user-page] .cover-container {
@@ -356,10 +409,7 @@ body p {
   z-index: 10;
   background: #edeaea;
   position: relative;
-  background-image: url(../images/arrow-icon.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: 10px;
+  border-left: 3px solid red;
 }
 [data-user-page] .wrapper [data-tab-target] ul.maintab li.last {
   border-bottom: none;
@@ -403,13 +453,9 @@ body p {
   border-right-width: 0;
   margin: auto;
   padding: 24px !important;
+  cursor: pointer;
 }
-@media only screen and (max-width: 995px) {
-  [data-user-page] .wrapper .maintab-container ul.maintab li {
-    font-size: 1.2em;
-  }
-}
-@media only screen and (max-width: 675px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   [data-user-page] .wrapper .maintab-container ul.maintab li {
     font-size: 1em;
   }
@@ -439,10 +485,10 @@ body p {
   z-index: 10;
   background: #edeaea;
   position: relative;
-  background-image: url(../images/arrow-icon.png);
   background-position: left;
   background-repeat: no-repeat;
   background-size: 10px;
+  border-left: 3px solid #E94643;
 }
 [data-user-page] .wrapper .maintab-container ul.maintab li.last {
   border-bottom: none;
@@ -522,6 +568,11 @@ body p {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-top: 4px solid #e94643;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li.active {
+    border-radius: 0;
+  }
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li.active a {
   background: #fff;
@@ -706,10 +757,20 @@ body p {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container {
   margin-top: 20px;
 }
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section {
+  font-size: 0.8em;
+}
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section img,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section img,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section img,
-[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section img {
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section img,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section i,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section i,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section i,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section i {
   width: 10px;
   height: 10px;
   margin-right: 15px;
@@ -717,7 +778,11 @@ body p {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section img:nth-of-type(1),
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section img:nth-of-type(1),
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section img:nth-of-type(1),
-[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section img:nth-of-type(1) {
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section img:nth-of-type(1),
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section i:nth-of-type(1),
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section i:nth-of-type(1),
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section i:nth-of-type(1),
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section i:nth-of-type(1) {
   margin-left: 15px;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section a,
@@ -726,6 +791,24 @@ body p {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section a {
   color: gray;
   text-decoration: none;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section .like-count-container,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section .like-count-container,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section .like-count-container,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section .like-count-container {
+  float: right;
+  margin-right: 10%;
+  color: #575757;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section .like-count-container .like-count,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section .like-count-container .like-count,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section .like-count-container .like-count,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section .like-count-container .like-count,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section .like-count-container .comment-count,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section .like-count-container .comment-count,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section .like-count-container .comment-count,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section .like-count-container .comment-count {
+  margin: 0 10px;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .comment_section,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .comment_section,
@@ -1063,6 +1146,13 @@ body p {
   background-size: 3px auto;
   background-image: url(../images/line-strip.png);
 }
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .side-line {
+    border-top: 1px solid #f5f1f1;
+    border-bottom: 1px solid #f5f1f1;
+    background-size: 1px auto;
+  }
+}
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .active {
   display: block;
 }
@@ -1074,7 +1164,7 @@ body p {
 }
 [data-user-page] .wrapper .aside-container {
   display: inline-block;
-  width: 25%;
+  width: 27%;
   vertical-align: top;
   box-sizing: border-box;
   padding: 1% 2%;
@@ -1089,10 +1179,21 @@ body p {
   }
   [data-user-page] .wrapper .aside-container .recent-visit .vis_stores {
     box-sizing: border-box;
-    padding: 10%;
+    padding: 3% 0% 0% 10%;
   }
   [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_img {
     padding-right: 10px;
+  }
+  [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .profile-dp {
+    width: 10%;
+    box-sizing: border-box;
+    padding-bottom: 10%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #575757;
   }
   [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details {
     width: 50% !important;
@@ -1105,6 +1206,7 @@ body p {
 }
 [data-user-page] .wrapper .aside-container .recent-visit {
   min-height: 100%;
+  width: 100%;
   display: inline-block;
   vertical-align: top;
 }
@@ -1127,6 +1229,17 @@ body p {
 }
 [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_img {
   padding-right: 10px;
+}
+[data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .profile-dp {
+  width: 12%;
+  box-sizing: border-box;
+  padding-bottom: 12%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #575757;
 }
 [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .store_details {
   display: inline-block;
@@ -1157,4 +1270,7 @@ body p {
 }
 [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .fav {
   width: 1rem;
+}
+[data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .fav-follow {
+  width: 1.5rem;
 }
