@@ -338,7 +338,7 @@ body p {
 @media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   [data-user-page] .wrapper [data-tab-target] {
     display: block;
-    width: 100%;
+    width: 60%;
     position: fixed;
     min-height: 100%;
     left: -100%;
@@ -674,7 +674,7 @@ body p {
   margin-bottom: 10px;
   border-radius: 2px;
 }
-@media only screen and (max-width: 675px) {
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content,
   [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content,
   [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content,
@@ -810,6 +810,44 @@ body p {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section .like-count-container .comment-count {
   margin: 0 10px;
 }
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section img,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section img,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section img,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section img,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section i,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section i,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section i,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section i {
+    margin-right: 4px;
+  }
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section img:nth-of-type(1),
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section img:nth-of-type(1),
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section img:nth-of-type(1),
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section img:nth-of-type(1),
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section i:nth-of-type(1),
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section i:nth-of-type(1),
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section i:nth-of-type(1),
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section i:nth-of-type(1) {
+    margin-left: 4px;
+  }
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section .like-count-container,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section .like-count-container,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section .like-count-container,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section .like-count-container {
+    margin: 0;
+  }
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section .like-count-container .like-count,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section .like-count-container .like-count,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section .like-count-container .like-count,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section .like-count-container .like-count,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .like_section .like-count-container .comment-count,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .like_section .like-count-container .comment-count,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .like_section .like-count-container .comment-count,
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section .like-count-container .comment-count {
+    margin: 0 0px;
+  }
+}
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .comment_section,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content .general-container .like-comment-container .comment_section,
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content .general-container .like-comment-container .comment_section,
@@ -909,7 +947,7 @@ body p {
   padding-bottom: 53px;
   vertical-align: bottom;
 }
-@media only screen and (max-width: 675px) {
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content.review .image,
   [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content.review .image,
   [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content.review .image,
@@ -926,7 +964,7 @@ body p {
   [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .favourites-section .section-content.followers .image,
   [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .wishlist-section .section-content.followers .image,
   [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content.followers .image {
-    width: 41px;
+    width: 50px;
   }
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content.review .general-content h3,

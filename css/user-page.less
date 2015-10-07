@@ -182,6 +182,7 @@ body{
                     margin: 3% 0px 0px;
                     @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
                         margin: 10% 0px 0px;
+                        margin: 10% 0px 0px;
                     }
                 }
             }
@@ -358,7 +359,7 @@ body{
             display: none;
             @media  @phone-strict, @smphone, @vsmphone, @vvsmphone{
                 display: block;
-                width: 100%;
+                width: 60%;
                 position: fixed;
                 min-height: 100%;
                 left: -100%;
@@ -686,7 +687,7 @@ body{
                                     padding: 10px;
                                     margin-bottom: 10px;
                                     border-radius: 2px;
-                                    @media only screen and (max-width: 675px){
+                                    @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
                                         width: 88%;
                                     }
                                     .general-container{
@@ -751,6 +752,21 @@ body{
                                                         margin: 0 10px;
                                                     }
                                                 }
+
+                                                @media @phone-strict, @smphone, @vsmphone, @vvsmphone {
+                                                    img,i{
+                                                        margin-right: 4px;
+                                                        &:nth-of-type(1){
+                                                            margin-left: 4px;
+                                                        }
+                                                    }
+                                                    .like-count-container{
+                                                        margin: 0;
+                                                        .like-count, .comment-count{
+                                                            margin: 0 0px;
+                                                        }
+                                                    }
+                                                }
                                             }
                                             .comment_section{
                                                 margin-top:20px;
@@ -787,14 +803,15 @@ body{
                                                 font-size: 16px;
                                             }
                                         }
+
                                         .image{
                                             background-size: contain;
                                             width: 50px;
                                             box-sizing: border-box;
                                             padding-bottom: 53px;
                                             vertical-align: bottom;
-                                            @media only screen and (max-width: 675px){
-                                                width: 41px;
+                                            @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
+                                                width: 50px;
                                             }
                                         }
                                         .general-content{
