@@ -34,6 +34,13 @@ body{
     p{
         font-size: 0.8em;
     }
+    a{
+        text-decoration: none;
+        color: #575757;
+        &:hover{
+            color: #000;
+        }
+    }
 }
 
 .background-picture(@width, @pad-bottom){
@@ -568,6 +575,7 @@ body{
                 position: relative;
                 z-index: 9;
                 display: none;
+                width: 100%;
                 h4{
                     font-size: 1.2em;
                     color: Black;
@@ -776,33 +784,42 @@ body{
                                                 }
                                             }
                                             .show-comments-container{
-                                                a{
-                                                    text-decoration: none;
-                                                    color: #333;
-                                                    &:hover{
-                                                        color: #000
+                                                p{
+                                                    i{
+                                                        margin-right: 5px;
+                                                    }
+                                                    a{
+                                                        text-decoration: none;
+                                                        color: #333;
+                                                        &:hover{
+                                                            color: #000
+                                                        }
                                                     }
                                                 }
-                                                .comment_box_collections{
 
+                                                .comment_box_collections{
                                                     width: 100%;
                                                     min-height: 20px;
                                                     overflow: hidden;
                                                     padding: 5px 0px;
                                                     .profile_img{
-                                                        float: left;
-                                                        margin-right: 40px;
-
+                                                        display: inline-block;
                                                         a{
                                                             img{
                                                                 width: 32px;
                                                                 height: 32px;
+                                                                border-radius: 50%;
                                                             }
                                                         }
                                                     }
                                                     .profile_comment{
                                                         text-align: left;
-                                                        margin-left: 40px;
+                                                        margin-left: 0px;
+                                                        display: inline-block;
+                                                        h3,p{
+                                                            margin: 0 25px;
+                                                            padding: 0;
+                                                        }
                                                         .profile_name{
                                                             font-weight: 900;
                                                         }
@@ -832,7 +849,7 @@ body{
                                                     text-align: center;
                                                 }
                                                 .user_comment {
-                                                    width: 80%;
+                                                    width: 84%;
                                                     height: 25px;
                                                     border-radius: 5px;
                                                     border: 1px solid wheat;
@@ -858,7 +875,7 @@ body{
                                             background-size: contain;
                                             width: 50px;
                                             box-sizing: border-box;
-                                            padding-bottom: 53px;
+                                            padding-bottom: 63px;
                                             vertical-align: bottom;
                                             @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
                                                 width: 50px;
@@ -916,7 +933,7 @@ body{
                                     &.favourites{
                                         .image{
                                             width: 60px;
-                                            padding-bottom: 60px;
+                                            padding-bottom: 70px;
                                             @media only screen and (max-width: 675px){
                                                 width: 40px;
                                                 padding-bottom: 40px;
@@ -932,6 +949,9 @@ body{
 
                                     }
                                     &.followers{
+                                        .image{
+                                            padding-bottom: 45px;
+                                        }
                                         margin: 0;
                                         .general-container{
                                             margin: 0;
@@ -962,6 +982,47 @@ body{
                                     }
                                 }
                             }
+                            .followers-section-container{
+                                box-sizing: border-box;
+                                padding: 10px;
+                                .followers-container{
+                                    box-sizing: border-box;
+                                    padding: 20px;
+                                    border-bottom: 1px solid #dddddd;
+                                    &:last-of-type{
+                                        border: none;
+                                    }
+                                    .profile-dp{
+                                        display: inline-block;
+                                        border-radius: 50%;
+                                        .background-picture(7%, 7%);
+                                        margin-right: 20px;
+                                        cursor: pointer;
+                                    }
+                                    .middle-content{
+                                        display: inline-block;
+                                        width: 78%;
+                                        text-align: left;
+                                        vertical-align: super;
+                                        h3{
+                                            margin: 5px 0;
+                                            color: #575757;
+                                        }
+                                        h4,h5,h6{
+                                            margin: 0;
+                                        }
+                                    }
+                                    .follow-icon-holder{
+                                        display: inline-block;
+                                        width: 9%;
+                                        cursor: pointer;
+                                        img{
+                                            width: 70%;
+                                        }
+                                    }
+                                }
+                            }
+
                         }
                         .active{
                             display:block;

@@ -27,70 +27,37 @@
             display: inline-block;
             vertical-align: top;
         }
+
+        .grid-container{
+            font-size: 0;
+            text-align: justify;
+        }
+        .grid-container:after{
+            content: ' ';
+            display: inline-block;
+            width: 100%;
+            background: red;
+        }
+        .grid-items{
+            display: inline-block;
+            width: 45%;
+            margin: 10px 0;
+            padding: 30px;
+            font-size: 1rem;
+            background: #ccc;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <section class="first">
-        <p>
-            Nullam finibus turpis condimentum, placerat metus et, tempus augue. In sit amet felis felis.
-            Integer tristique commodo vulputate. Phasellus vitae ipsum nec ligula blandit tincidunt eget nec tellus.
-            Aenean molestie nunc ligula, et viverra metus mattis id. Pellentesque purus est, molestie et tincidunt vitae, suscipit sed mi.
-            Nullam euismod condimentum tempor. Suspendisse consequat lacinia lorem quis convallis. Nulla rhoncus placerat nisl et tincidunt.
-            Proin dignissim scelerisque eros id consectetur.
-            Nullam pretium sollicitudin aliquam. Nullam lobortis lobortis consectetur. Morbi at ligula ipsum. Curabitur sed
-            orci id urna egestas convallis.
-        </p>
-    </section>
-    <section class="third">
-        <p>
-            Nullam finibus turpis condimentum, placerat metus et, tempus augue. In sit amet felis felis.
-            Integer tristique commodo vulputate. Phasellus vitae ipsum nec ligula blandit tincidunt eget nec tellus.
-            Aenean molestie nunc ligula, et viverra metus mattis id. Pellentesque purus est, molestie et tincidunt vitae, suscipit sed mi.
-            Nullam euismod condimentum tempor. Suspendisse consequat lacinia lorem quis convallis. Nulla rhoncus placerat nisl et tincidunt.
-            Proin dignissim scelerisque eros id consectetur.
-            Nullam pretium sollicitudin aliquam. Nullam lobortis lobortis consectetur. Morbi at ligula ipsum. Curabitur sed
-            orci id urna egestas convallis.
-        </p>
-        <p>
-            Nullam finibus turpis condimentum, placerat metus et, tempus augue. In sit amet felis felis.
-            Integer tristique commodo vulputate. Phasellus vitae ipsum nec ligula blandit tincidunt eget nec tellus.
-            Aenean molestie nunc ligula, et viverra metus mattis id. Pellentesque purus est, molestie et tincidunt vitae, suscipit sed mi.
-            Nullam euismod condimentum tempor. Suspendisse consequat lacinia lorem quis convallis. Nulla rhoncus placerat nisl et tincidunt.
-            Proin dignissim scelerisque eros id consectetur.
-            Nullam pretium sollicitudin aliquam. Nullam lobortis lobortis consectetur. Morbi at ligula ipsum. Curabitur sed
-            orci id urna egestas convallis.
-        </p>
-        <p>
-            Nullam finibus turpis condimentum, placerat metus et, tempus augue. In sit amet felis felis.
-            Integer tristique commodo vulputate. Phasellus vitae ipsum nec ligula blandit tincidunt eget nec tellus.
-            Aenean molestie nunc ligula, et viverra metus mattis id. Pellentesque purus est, molestie et tincidunt vitae, suscipit sed mi.
-            Nullam euismod condimentum tempor. Suspendisse consequat lacinia lorem quis convallis. Nulla rhoncus placerat nisl et tincidunt.
-            Proin dignissim scelerisque eros id consectetur.
-            Nullam pretium sollicitudin aliquam. Nullam lobortis lobortis consectetur. Morbi at ligula ipsum. Curabitur sed
-            orci id urna egestas convallis.
-        </p>
-        <p>
-            Nullam finibus turpis condimentum, placerat metus et, tempus augue. In sit amet felis felis.
-            Integer tristique commodo vulputate. Phasellus vitae ipsum nec ligula blandit tincidunt eget nec tellus.
-            Aenean molestie nunc ligula, et viverra metus mattis id. Pellentesque purus est, molestie et tincidunt vitae, suscipit sed mi.
-            Nullam euismod condimentum tempor. Suspendisse consequat lacinia lorem quis convallis. Nulla rhoncus placerat nisl et tincidunt.
-            Proin dignissim scelerisque eros id consectetur.
-            Nullam pretium sollicitudin aliquam. Nullam lobortis lobortis consectetur. Morbi at ligula ipsum. Curabitur sed
-            orci id urna egestas convallis.
-        </p>
-    </section>
-    <section class="second">
-        <p>
-            Nullam finibus turpis condimentum, placerat metus et, tempus augue. In sit amet felis felis.
-            Integer tristique commodo vulputate. Phasellus vitae ipsum nec ligula blandit tincidunt eget nec tellus.
-            Aenean molestie nunc ligula, et viverra metus mattis id. Pellentesque purus est, molestie et tincidunt vitae, suscipit sed mi.
-            Nullam euismod condimentum tempor. Suspendisse consequat lacinia lorem quis convallis. Nulla rhoncus placerat nisl et tincidunt.
-            Proin dignissim scelerisque eros id consectetur.
-            Nullam pretium sollicitudin aliquam. Nullam lobortis lobortis consectetur. Morbi at ligula ipsum. Curabitur sed
-            orci id urna egestas convallis.
-        </p>
-    </section>
+    <ul class="grid-container">
+        <li class="grid-items"></li>
+        <li class="grid-items"></li>
+        <li class="grid-items"></li>
+        <li class="grid-items"></li>
+        <li class="grid-items"></li>
+        <li class="grid-items"></li>
+    </ul>
 
 </div>
 
