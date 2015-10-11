@@ -93,7 +93,7 @@ $(function () {
     });
 
     $clickToHide.on('click', function(e){
-        console.log('hiya');
+        //console.log('hiya');
         $container.animate({'left':'-100%'});
         $container.data('shown','0');
     });
