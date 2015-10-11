@@ -1,0 +1,163 @@
+/*START: campaign-page.less*/
+@import "font-awesome.min.css";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+@xs-vvvmin:50px;
+@xs-vvmin:240px;
+@xs-vmin: 320px;
+@xs-min: 480px;
+@sm-min: 768px;
+@md-min: 992px;
+@lg-min: 1200px;
+
+@xs-vvvmax: (@xs-vvmin - 1);
+@xs-vvmax: (@xs-vmin - 1);
+@xs-vmax: (@xs-min - 1);
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+
+
+///@vsmphone:        ~"only screen and (min-width: @{xs-vvmin})";/
+@vvsmphone:        ~"only screen and (min-width: @{xs-vvvmin}) and (max-width: @{xs-vvvmax})";
+@vsmphone:         ~"only screen and (min-width: @{xs-vvmin}) and (max-width: @{xs-vvmax})";
+@smphone:          ~"only screen and (min-width: @{xs-vmin}) and (max-width: @{xs-vmax})";
+@phone-strict:     ~"only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})";
+@tablet-strict:    ~"only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})";
+@desktop-strict:   ~"only screen and (min-width: @{md-min}) and (max-width: @{md-max})";
+@large:            ~"only screen and (min-width: @{lg-min})";
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+    background: #ede6e6;
+    p{
+        font-size: 0.8em;
+    }
+    a{
+        text-decoration: none;
+        color: #575757;
+        &:hover{
+            color: #000;
+        }
+    }
+}
+
+.background-picture(@width, @pad-bottom){
+    width: @width;
+    box-sizing: border-box;
+    padding-bottom: @pad-bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+hr.border-light {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.no-bold{
+    font-weight: normal;
+}
+
+.container-fluid{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.visible-lg{
+    display: inline-block;
+}
+
+.visible-sm{
+    display: none;
+}
+
+.button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    &.button-default{
+        padding: 0.5em 2em;
+        font-size: 1.3em;
+        border-radius: 2px;
+    }
+    &.button-md{
+        padding: 0.3em 1em;
+        font-size: 1.2em;
+        border-radius: 2px;
+    }
+    &.button-sm{
+        padding: 0.3em 1em;
+        font-size: 1em;
+        border-radius: 2px;
+    }
+    &.button-round{
+        padding: 20px;
+        border-radius: 50%;
+    }
+    &.red{
+        background-color: red;
+        color: white;
+    }
+}
+
+.hide{
+    display: none;
+}
+
+[data-campaign-page]{
+    background-color: #191919;
+    .campaign-header{
+        text-align: center;
+        margin-bottom: 10px;
+        background-color: gray;
+        padding: 20px;
+    }
+    .image-upload-container, .rules-container{
+        vertical-align: top;
+        box-sizing: border-box;
+        padding: 20px;
+        background-color: #ddd;
+    }
+
+    .middle-section{
+        margin: 0 auto;
+        .image-upload-container{
+            display: inline-block;
+            margin-left: 5px;
+            width: 50%;
+            .image-upload-form{
+                input{
+                    margin-bottom: 20px;
+                }
+                .image-strip{
+                    width: 100%;
+                    background: gray;
+                    height: 100px;
+                    margin-bottom: 20px;
+                }
+                textarea{
+                    width: 97%;
+                    height: 200px;
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin-bottom: 20px;
+                }
+                button{
+                    clear: both;
+                }
+            }
+
+        }
+        .rules-container{
+            display: inline-block;
+            width: 49%;
+        }
+    }
+
+
+}
+/*END: campaign-page.less */

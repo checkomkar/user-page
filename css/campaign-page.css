@@ -1,0 +1,117 @@
+@import "font-awesome.min.css";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+/*START: campaign-page.less*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans";
+  background: #ede6e6;
+}
+body p {
+  font-size: 0.8em;
+}
+body a {
+  text-decoration: none;
+  color: #575757;
+}
+body a:hover {
+  color: #000;
+}
+hr.border-light {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.no-bold {
+  font-weight: normal;
+}
+.container-fluid {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.visible-lg {
+  display: inline-block;
+}
+.visible-sm {
+  display: none;
+}
+.button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.button.button-default {
+  padding: 0.5em 2em;
+  font-size: 1.3em;
+  border-radius: 2px;
+}
+.button.button-md {
+  padding: 0.3em 1em;
+  font-size: 1.2em;
+  border-radius: 2px;
+}
+.button.button-sm {
+  padding: 0.3em 1em;
+  font-size: 1em;
+  border-radius: 2px;
+}
+.button.button-round {
+  padding: 20px;
+  border-radius: 50%;
+}
+.button.red {
+  background-color: red;
+  color: white;
+}
+.hide {
+  display: none;
+}
+[data-campaign-page] {
+  background-color: #191919;
+}
+[data-campaign-page] .campaign-header {
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: gray;
+  padding: 20px;
+}
+[data-campaign-page] .image-upload-container,
+[data-campaign-page] .rules-container {
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #ddd;
+}
+[data-campaign-page] .middle-section {
+  margin: 0 auto;
+}
+[data-campaign-page] .middle-section .image-upload-container {
+  display: inline-block;
+  margin-left: 5px;
+  width: 50%;
+}
+[data-campaign-page] .middle-section .image-upload-container .image-upload-form input {
+  margin-bottom: 20px;
+}
+[data-campaign-page] .middle-section .image-upload-container .image-upload-form .image-strip {
+  width: 100%;
+  background: gray;
+  height: 100px;
+  margin-bottom: 20px;
+}
+[data-campaign-page] .middle-section .image-upload-container .image-upload-form textarea {
+  width: 97%;
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+[data-campaign-page] .middle-section .image-upload-container .image-upload-form button {
+  clear: both;
+}
+[data-campaign-page] .middle-section .rules-container {
+  display: inline-block;
+  width: 49%;
+}
