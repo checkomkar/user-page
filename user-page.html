@@ -40,10 +40,10 @@
                         <i class="fa fa-times"></i>
                     </div>
                     <ul>
-                        <li>
+                        <li data-add-wishlist-trigger>
                             Add a wishlist
                         </li>
-                        <li>
+                        <li data-add-shopping-trigger>
                             Add a shopping update
                         </li>
                     </ul>
@@ -51,6 +51,33 @@
             </div>
         </div>
     </div>
+    <!--START: Add Wishlist -->
+    <section class="add-to-section hide animated" data-add-to-section>
+        <div class="close" data-close-add>
+            <i class="fa fa-times"></i>
+        </div>
+        <div class="add-to-wishlist" data-add-to-wishlist>
+            <div class="cover">
+                <i class="fa fa-image"></i>
+                <h1>ADD WISHLIST</h1>
+            </div>
+            <div class="details-container">
+                <form class="wishlist-form">
+                    <input type="text" placeholder="Give a name to wishlist">
+                    <textarea placeholder="Description(Optional)"></textarea>
+                    <div class="upload-image" data-file-upload-trigger>
+                        <i class="fa fa-camera fa-2x"></i>
+                        <h3 class="no-bold">Upload a Photo</h3>
+                        <h5 class="no-bold">You can select multiple pictures at once</h5>
+                    </div>
+                    <input type="file" hidden data-file-upload-button>
+                    <button class="button button-default button-gray">RESET</button>
+                    <button class="button button-default red">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--END: Add Wishlist -->
 </section>
 
 <section class="tag-headings-container">

@@ -73,6 +73,11 @@ $(function () {
     var $addButton = $('[data-add-button]');
     var $addBox = $('[data-add-box]');
     var $closeButton = $('[data-close]');
+    var $closeAddSection = $('[data-close-add]');
+
+    var $addToSection = $('[data-add-to-section]');
+    var $addWishlistTrigger = $('[data-add-wishlist-trigger]');
+
 
     $addButton.on('click', function(e){
         $overlay.fadeIn();
@@ -94,6 +99,16 @@ $(function () {
         $overlay.fadeOut();
         $addBox.hide();
     });
+
+    $addWishlistTrigger.on('click', function(e){
+        $overlay.fadeIn();
+        $addToSection.show().addClass('slideInRight');
+    });
+
+    $closeAddSection.on('click', function(e){
+        $overlay.fadeOut();
+        $addToSection.fadeOut().addClass('hide');
+    })
 
     //$(window).on('click',  function (e){
     //    if (!$container.is(e.target) && !$trigger.is(e.target) // if the target of the click isn't the container...
