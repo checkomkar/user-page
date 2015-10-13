@@ -90,18 +90,18 @@ $(function () {
     });
 
     $('[data-add-box] li').on('click', function(e){
-        $overlay.fadeOut();
+        $overlay.fadeOut(100);
         $addBox.hide();
     });
 
     $closeButton.on('click', function(e){
         var $this = $(this);
-        $overlay.fadeOut();
+        $overlay.fadeOut(100);
         $addBox.hide();
     });
 
     $addWishlistTrigger.on('click', function(e){
-        $overlay.fadeIn();
+        $overlay.fadeIn(100);
         $addToSection.show().addClass('slideInRight');
     });
 
