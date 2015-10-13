@@ -1,6 +1,6 @@
 @import "font-awesome.min.css";
+@import "animate.css";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
-/*START: user-page.less*/
 /*START: user-page-activity.less*/
 [data-user-activity-page] .cover-container,
 [data-user-network-page] .cover-container {
@@ -1595,6 +1595,12 @@ body a {
 body a:hover {
   color: #000;
 }
+button:focus {
+  outline: 0;
+}
+.hide {
+  display: none;
+}
 hr.border-light {
   border: 0;
   height: 0;
@@ -1664,6 +1670,21 @@ hr.border-light {
     background-color: red;
     color: white;
   }
+}
+/*START: user-page.less*/
+[data-user-page] .overlay {
+  background: #000;
+  display: none;
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+  z-index: 98;
 }
 [data-user-page] .clear-fix {
   clear: both;
@@ -1751,9 +1772,86 @@ hr.border-light {
 [data-user-page] .cover-container .user-details-container .follow {
   width: 19%;
   margin-top: 2%;
+  position: relative;
+  z-index: 99;
 }
 [data-user-page] .cover-container .user-details-container .follow i {
   font-size: 1.2em;
+}
+[data-user-page] .cover-container .user-details-container .follow .arrow-box {
+  top: 10px;
+  position: relative;
+  z-index: 99;
+  background: #ffffff;
+  border: 1px solid #719ECE;
+  width: 200px;
+  border-radius: 3px;
+  right: 115px;
+  box-sizing: border-box;
+  padding: 0px 0 0px;
+  -webkit-filter: drop-shadow(0 1px 10px rgba(113, 158, 206, 0.8));
+  -moz-box-shadow: 0 1px 10px rgba(113, 158, 206, 0.8);
+  filter: drop-shadow(0 1px 10px rgba(113, 158, 206, 0.8));
+}
+[data-user-page] .cover-container .user-details-container .follow .arrow-box .close {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  padding: 5px;
+  color: white;
+}
+[data-user-page] .cover-container .user-details-container .follow .arrow-box .close i {
+  font-size: 12px;
+  vertical-align: text-top;
+}
+[data-user-page] .cover-container .user-details-container .follow .arrow-box:after,
+[data-user-page] .cover-container .user-details-container .follow .arrow-box:before {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+[data-user-page] .cover-container .user-details-container .follow .arrow-box:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #ffffff;
+  border-width: 9px;
+  left: 70%;
+  margin-left: -9px;
+}
+[data-user-page] .cover-container .user-details-container .follow .arrow-box:before {
+  border-color: rgba(113, 158, 206, 0);
+  border-bottom-color: #719ECE;
+  border-width: 10px;
+  left: 70%;
+  margin-left: -10px;
+}
+[data-user-page] .cover-container .user-details-container .follow .arrow-box ul {
+  margin: 0;
+  padding: 0;
+}
+[data-user-page] .cover-container .user-details-container .follow .arrow-box ul li {
+  display: inline-block;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 10px;
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+[data-user-page] .cover-container .user-details-container .follow .arrow-box ul li:hover {
+  background: #f2f2f2;
 }
 @media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   [data-user-page] .cover-container {

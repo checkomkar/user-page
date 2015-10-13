@@ -69,6 +69,32 @@ $(function () {
     var $vtabHeight = $('#v-nav').height();
     var $tabChildHeight = $('.tab-content-child').height();
 
+    var $overlay = $('[data-overlay]');
+    var $addButton = $('[data-add-button]');
+    var $addBox = $('[data-add-box]');
+    var $closeButton = $('[data-close]');
+
+    $addButton.on('click', function(e){
+        $overlay.fadeIn();
+        $addBox.show().addClass('bounceIn');
+    });
+
+    $overlay.on('click', function(){
+        $(this).fadeOut();
+        $addBox.hide();
+    });
+
+    $('[data-add-box] li').on('click', function(e){
+        $overlay.fadeOut();
+        $addBox.hide();
+    });
+
+    $closeButton.on('click', function(e){
+        var $this = $(this);
+        $overlay.fadeOut();
+        $addBox.hide();
+    });
+
     //$(window).on('click',  function (e){
     //    if (!$container.is(e.target) && !$trigger.is(e.target) // if the target of the click isn't the container...
     //        && ($container.has(e.target).length === 0) && ($trigger.has(e.target).length === 0)) // ... nor a descendant of the container

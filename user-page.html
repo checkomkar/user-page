@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/user-page.css">
 </head>
 <body data-user-page>
+<div class="overlay" data-overlay></div>
 <section class="cover-container cover-container-sm">
     <div class="container-fluid">
         <div class="user-details-container">
@@ -33,7 +34,20 @@
                 </div>
             </div>
             <div class="follow">
-                <button class="button button-round red visible-lg"><i class="fa fa-plus"></i></button>
+                <button class="button button-round red visible-lg" data-add-button><i class="fa fa-plus"></i></button>
+                <div class="hide arrow-box animated" data-add-box>
+                    <div class="close" data-close>
+                        <i class="fa fa-times"></i>
+                    </div>
+                    <ul>
+                        <li>
+                            Add a wishlist
+                        </li>
+                        <li>
+                            Add a shopping update
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -804,9 +818,8 @@
 
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript"
-        src="http://benalman.com/code/projects/jquery-hashchange/jquery.ba-hashchange.js"></script>
-
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://benalman.com/code/projects/jquery-hashchange/jquery.ba-hashchange.js"></script>
 <script src="js/user-page.js"></script>
 </body>
 </html>

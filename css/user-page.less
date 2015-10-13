@@ -1,5 +1,5 @@
-/*START: user-page.less*/
 @import "font-awesome.min.css";
+@import "animate.css";
 @import "user-page-activity";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
 @xs-vvvmin:50px;
@@ -44,12 +44,39 @@ body{
     }
 }
 
+button:focus{
+    outline:0;
+}
+
+.hide{
+    display: none;
+}
+
 .background-picture(@width, @pad-bottom){
     width: @width;
     box-sizing: border-box;
     padding-bottom: @pad-bottom;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.box-sizing (@type: border-box){
+    -webkit-box-sizing: @type;
+    -moz-box-sizing:    @type;
+    box-sizing:         @type;
+}
+
+.transition (@transition){
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
+}
+
+.opacity (@opacity: 0.5) {
+    -webkit-opacity: 	@opacity;
+    -moz-opacity: 		@opacity;
+    opacity: 		@opacity;
 }
 
 hr.border-light {
@@ -127,8 +154,16 @@ hr.border-light {
         }
     }
 }
-
+/*START: user-page.less*/
 [data-user-page]{
+    .overlay{
+        background: #000;
+        display: none;
+        .opacity(0.8);
+        .background-picture(100%, 100%);
+        position: fixed;
+        z-index: 98;
+    }
     .clear(@clearFix){
         clear: @clearFix;
     }
@@ -204,10 +239,83 @@ hr.border-light {
             .follow{
                 width: 19%;
                 margin-top: 2%;
+                position: relative;
+                z-index: 99;
                 i{
                     font-size: 1.2em;
                 }
+                .arrow-box {
+                    top:10px;
+                    position: relative;
+                    z-index: 99;
+                    background: #ffffff;
+                    border: 1px solid #719ECE;
+                    width: 200px;
+                    border-radius: 3px;
+                    right: 115px;
+                    box-sizing: border-box;
+                    padding: 0px 0 0px;
+                    -webkit-filter: drop-shadow(0 1px 10px rgba(113,158,206,0.8));
+                    -moz-box-shadow: 0 1px 10px rgba(113,158,206,0.8);
+                    filter: drop-shadow(0 1px 10px rgba(113,158,206,0.8));
+                    .close{
+                        width: 10px;
+                        height: 10px;
+                        cursor: pointer;
+                        background-color: black;
+                        border: 2px solid white;
+                        border-radius: 50%;
+                        position: absolute;
+                        right: -10px;
+                        top: -10px;
+                        padding: 5px;
+                        color: white;
+                        i{
+                            font-size: 12px;
+                            vertical-align: text-top;
+                        }
 
+                    }
+                    &:after, &:before{
+                        bottom: 100%;
+                        border: solid transparent;
+                        content: " ";
+                        height: 0;
+                        width: 0;
+                        position: absolute;
+                        pointer-events: none;
+                    }
+                    &:after{
+                        border-color: rgba(255, 255, 255, 0);
+                        border-bottom-color: #ffffff;
+                        border-width: 9px;
+                        left: 70%;
+                        margin-left: -9px;
+                    }
+                    &:before{
+                        border-color: rgba(113, 158, 206, 0);
+                        border-bottom-color: #719ECE;
+                        border-width: 10px;
+                        left: 70%;
+                        margin-left: -10px;
+                    }
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                        li{
+                            display: inline-block;
+                            box-sizing: border-box;
+                            border-bottom: 1px solid #ddd;
+                            padding: 10px 10px;
+                            width: 100%;
+                            cursor: pointer;
+                            .transition(0.3s ease);
+                            &:hover{
+                                background: #f2f2f2;
+                            }
+                        }
+                    }
+                }
             }
         }
 
