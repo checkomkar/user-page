@@ -5,11 +5,18 @@
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 320px;
+        position: relative;
         @media @desktop-strict {
             min-height: 310px;
         }
         @media only screen and (max-width: 995px){
             min-height: 250px;
+        }
+        .back-button{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            .background-picture(50px, 50px);
         }
         .user-details-container{
             box-sizing: border-box;

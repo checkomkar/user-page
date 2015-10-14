@@ -60,7 +60,7 @@ $(function () {
 
         e.preventDefault();
     });
-
+    var $backButton = $('[data-back-button]');
     var $container = $('[data-tab-target]');
     var $trigger = $('[data-tab-trigger]');
     var $tabLinks = $('[data-tabs-links]');
@@ -78,6 +78,10 @@ $(function () {
     var $addToSection = $('[data-add-to-section]');
     var $addWishlistTrigger = $('[data-add-wishlist-trigger]');
 
+    $backButton.on('click', function(e){
+        parent.history.back();
+        return false;
+    });
 
     $addButton.on('click', function(e){
         $overlay.fadeIn();
