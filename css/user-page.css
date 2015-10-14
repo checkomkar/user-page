@@ -1527,7 +1527,9 @@
   border: none;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .profile-dp,
-[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .profile-dp {
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .profile-dp,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .brand-dp,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .brand-dp {
   display: inline-block;
   border-radius: 50%;
   width: 7%;
@@ -1535,8 +1537,12 @@
   padding-bottom: 7%;
   background-repeat: no-repeat;
   background-size: contain;
-  margin-right: 20px;
+  margin-right: 5px;
   cursor: pointer;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .brand-dp,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .brand-dp {
+  border-radius: 2px;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content {
@@ -1544,6 +1550,22 @@
   width: 75%;
   text-align: left;
   vertical-align: super;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content.been-there,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content.been-there {
+  width: 64%;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content.been-there,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content.been-there {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content.been-there,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content.been-there {
+    width: 50%;
+  }
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content h3,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content h3 {
@@ -1559,14 +1581,118 @@
   margin: 0;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-icon-holder,
-[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-icon-holder {
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-icon-holder,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder {
   display: inline-block;
   width: 6%;
   cursor: pointer;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-icon-holder img,
-[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-icon-holder img {
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-icon-holder img,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img {
   width: 70%;
+  margin-right: 10%;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder {
+  width: 26%;
+  vertical-align: super;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder span,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder span {
+  vertical-align: middle;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img {
+  width: 30px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img.marker,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img.marker {
+  width: 14px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img.heart,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img.heart {
+  width: 20px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder span,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder span {
+  width: 20%;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder span.count,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder span.count {
+  background-color: #fbdad9;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder {
+    width: 33%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container {
+    padding: 10px 0;
+  }
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-button,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-button {
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+    text-align: right;
+    padding-top: 15px;
+  }
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-button button img,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-button button img {
+    width: 20px;
+  }
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .profile-dp,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .profile-dp,
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .brand-dp,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .brand-dp {
+    display: inline-block;
+    border-radius: 2px;
+    width: 80px;
+    box-sizing: border-box;
+    padding-bottom: 80px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content.been-there,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content.been-there {
+    width: 60%;
+  }
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder {
+    width: 100%;
+    vertical-align: top;
+    padding: 20px 0;
+    background: #fafafa;
+    border-top: 1px solid #f2f2f2;
+  }
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img {
+    margin-right: 10px;
+  }
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder span.count,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder span.count {
+    font-size: 12px;
+    padding: 5px;
+    box-shadow: 2px 2px 2px #aaa;
+  }
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .active,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .active {
@@ -1654,6 +1780,17 @@ hr.border-light {
 .button.button-gray {
   border: 1px solid #aaaaaa;
   color: #aaaaaa;
+}
+.button.button-yallapurple {
+  background-color: #2d2d7c;
+  color: white;
+}
+.button.button-green {
+  background-color: green;
+  color: white;
+}
+.button.button-shadow {
+  box-shadow: 3px 3px 3px #333;
 }
 @media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   .visible-lg {
@@ -2316,20 +2453,42 @@ hr.border-light {
     margin: 0;
     padding: 0;
   }
+  [data-user-page] .wrapper .menu-container .menu ul a:last-of-type li {
+    border-bottom: none;
+  }
   [data-user-page] .wrapper .menu-container .menu ul li {
     list-style: none;
-    box-sizing: border-box;
-    padding: 5px 10px;
+    padding: 20px 10px;
     border-bottom: 1px solid #f2f2f2;
     color: #575757;
     text-align: center;
     font-weight: normal;
+    background-image: url(../images/light-arrow.png);
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: 10px;
+    vertical-align: middle;
+  }
+  [data-user-page] .wrapper .menu-container .menu ul li .icon-div {
+    width: 9%;
+    height: 50px;
+    display: inline-block;
+    background-position: center 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  [data-user-page] .wrapper .menu-container .menu ul li .text {
+    width: 50%;
+    height: 50px;
+    display: inline-block;
+    vertical-align: inherit;
+    margin-right: 35px;
   }
   [data-user-page] .wrapper .menu-container .menu ul li h3 {
     font-weight: normal;
   }
-  [data-user-page] .wrapper .menu-container .menu ul li:last-of-type {
-    border: none;
+  [data-user-page] .wrapper .menu-container .menu ul li h3 a {
+    width: 90%;
   }
 }
 [data-user-page] .wrapper #v-nav {
@@ -2443,6 +2602,7 @@ hr.border-light {
   background: #fff;
   margin-top: -5px;
   border-radius: 0 2px 2px 0px;
+  min-height: 700px;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab {
   display: none;
@@ -3160,7 +3320,8 @@ hr.border-light {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container:last-of-type {
   border: none;
 }
-[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .profile-dp {
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .profile-dp,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .brand-dp {
   display: inline-block;
   border-radius: 50%;
   width: 7%;
@@ -3168,14 +3329,30 @@ hr.border-light {
   padding-bottom: 7%;
   background-repeat: no-repeat;
   background-size: contain;
-  margin-right: 20px;
+  margin-right: 5px;
   cursor: pointer;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .brand-dp {
+  border-radius: 2px;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content {
   display: inline-block;
   width: 75%;
   text-align: left;
   vertical-align: super;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content.been-there {
+  width: 64%;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content.been-there {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content.been-there {
+    width: 50%;
+  }
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content h3 {
   margin: 5px 0;
@@ -3186,13 +3363,51 @@ hr.border-light {
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .middle-content h6 {
   margin: 0;
 }
-[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-icon-holder {
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-icon-holder,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder {
   display: inline-block;
   width: 6%;
   cursor: pointer;
 }
-[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-icon-holder img {
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-icon-holder img,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img {
   width: 70%;
+  margin-right: 10%;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder {
+  width: 26%;
+  vertical-align: super;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder span {
+  vertical-align: middle;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img {
+  width: 30px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img.marker {
+  width: 14px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder img.heart {
+  width: 20px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder span {
+  width: 20%;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder span.count {
+  background-color: #fbdad9;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .icons-holder {
+    width: 33%;
+  }
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .active {
   display: block;
@@ -3304,7 +3519,7 @@ hr.border-light {
 }
 [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 [data-user-page] .wrapper .aside-container .recent-visit .vis_stores .vis_stores_div div .rev_fav .rev {
   width: 1rem;

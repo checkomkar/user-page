@@ -154,59 +154,82 @@
     </div>
     <div class="maintab-container">
         <ul class="maintab">
-            <li class="first current" data-tab="about"><img class="icon" src="images/about-icon.png">About</li>
+            <li class="first current" data-tab="activity"><img class="icon" src="images/activity-icon.png"> Activity</li>
             <li><img class="icon" src="images/network-icon.png">Network</li>
-            <li><!--i class="icon activity"--><img class="icon" src="images/activity-icon.png"> Activity</li>
-            <li><img class="icon" src="images/lists-icon.png">Lists</li>
+            <!--li><img class="icon" src="images/lists-icon.png">Lists</li-->
+            <li><img class="icon" src="images/hearts-icon.png">Favourites</li>
+            <li><img class="icon" src="images/been-there.png">Been There</li>
             <li><img class="icon" src="images/statistics-icon.png">Statistics</li>
-            <li class="last"><img class="icon" src="images/rating-icon.png">Ratings</li>
+            <li><img class="icon" src="images/rating-icon.png">Ratings</li>
+            <li class="last"><img class="icon" src="images/about-icon.png">About</li>
         </ul>
     </div>
     <div class="menu-container">
         <div class="menu">
             <ul>
-                <li>
-                    <h3>
-                        <a href="/user-page/activity.html">
+                <a href="/user-page/activity.html">
+                    <li>
+                        <div class="icon-div" style="background-image: url(images/activity-icon.png);"></div>
+                        <div class="text">
                             Activity
-                        </a>
-                    </h3>
-                </li>
-                <li>
-                    <h3>
-                        <a href="/user-page/network.html">
+                        </div>
+                    </li>
+                </a>
+
+                <a href="/user-page/network.html">
+                    <li>
+                        <div class="icon-div" style="background-image: url(images/network-icon.png);"></div>
+                        <div class="text">
                             Network
-                        </a>
-                    </h3>
-                </li>
-                <li>
-                    <h3>
-                        <a href="/list">
-                            List
-                        </a>
-                    </h3>
-                </li>
-                <li>
-                    <h3>
-                        <a href="/statistics">
+                        </div>
+                    </li>
+                </a>
+
+
+                <a href="/user-page/favourites.html">
+                    <li>
+                        <div class="icon-div" style="background-image: url(images/hearts-icon.png);"></div>
+                        <div class="text">
+                            Favourites
+                        </div>
+                    </li>
+                </a>
+
+                <a href="/user-page/been-there.html">
+                    <li>
+                        <div class="icon-div" style="background-image: url(images/been-there.png);"></div>
+                        <div class="text">
+                            Been There
+                        </div>
+                    </li>
+                </a>
+
+                <a href="/user-page/statistics.html">
+                    <li>
+                        <div class="icon-div" style="background-image: url(images/statistics-icon.png);"></div>
+                        <div class="text">
                             Statistics
-                        </a>
-                    </h3>
-                </li>
-                <li>
-                    <h3>
-                        <a href="/visited-stores">
-                            Visited Stores
-                        </a>
-                    </h3>
-                </li>
-                <li>
-                    <h3>
-                        <a href="/ratings">
+                        </div>
+                    </li>
+                </a>
+
+                <a href="/user-page/ratings.html">
+                    <li>
+                        <div class="icon-div" style="background-image: url(images/rating-icon.png);"></div>
+                        <div class="text">
                             Ratings
-                        </a>
-                    </h3>
-                </li>
+                        </div>
+                    </li>
+                </a>
+
+                <a href="/user-page/about.html">
+                    <li>
+                        <div class="icon-div" style="background-image: url(images/about-icon.png);"></div>
+                        <div class="text">
+                            About
+                        </div>
+                    </li>
+                </a>
             </ul>
         </div>
     </div>
@@ -641,16 +664,124 @@
             </div>
         </div>
 
-        <div class="tab-content">
+        <div class="tab-content" data-tab-favourites>
+            <div class="inside-tabs">
+                <ul class="tab-links">
+                    <li class="active"><a data-inside-tab href="#tab1">Favourites (3)</a></li>
+                </ul>
 
-            <h4>Network</h4>
+                <div class="tab-content-child">
+                    <div id="tab1" class="tab active">
+                        <article class="followers-section-container">
+                            <section class="followers-container">
+                                <div class="brand-dp" style="background-image: url(images/charles-keith.jpg);"></div>
 
+                                <div class="middle-content been-there">
+                                    <h5>Zara</h5>
+                                    <h5 class="no-bold">
+                                        Dubai Mall/Downtown > I5, Ground Floor
+                                    </h5>
+                                </div>
+                                <div class="icons-holder">
+                                    <img class="marker" title="Add to favourites" src="images/map-marker-icon.png">
+                                    <img class="heart" title="" src="images/hearts-icon.png">
+                                    <span class="count">22</span>
+                                </div>
+                            </section>
+                            <section class="followers-container">
+                                <div class="brand-dp" style="background-image: url(images/charles-keith.jpg);"></div>
+
+                                <div class="middle-content been-there">
+                                    <h5>Charles & Keith</h5>
+                                    <h5 class="no-bold">
+                                        Deira City Centre > 108, First Floor
+                                    </h5>
+                                </div>
+                                <div class="icons-holder">
+                                    <img class="marker" title="Add to favourites" src="images/been-there-red.png">
+                                    <img class="heart" title="" src="images/heart-red.png">
+                                    <span class="count">25</span>
+                                </div>
+                            </section>
+                            <section class="followers-container">
+                                <div class="brand-dp" style="background-image: url(images/typo.png);"></div>
+
+                                <div class="middle-content been-there">
+                                    <h5>Typo</h5>
+                                    <h5 class="no-bold">
+                                        Al Wasl > Ground Floor, Box Park
+                                    </h5>
+                                </div>
+                                <div class="icons-holder">
+                                    <img class="marker" title="Add to favourites" src="images/map-marker-icon.png">
+                                    <img class="heart" title="" src="images/hearts-icon.png">
+                                    <span class="count">15</span>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="tab-content">
+            <div class="inside-tabs">
+                <ul class="tab-links">
+                    <li class="active"><a data-inside-tab href="#tab1">Been There (3)</a></li>
+                </ul>
 
-            <h4>List</h4>
+                <div class="tab-content-child">
+                    <div id="tab1" class="tab active">
+                        <article class="followers-section-container">
+                            <section class="followers-container">
+                                <div class="brand-dp" style="background-image: url(images/charles-keith.jpg);"></div>
 
+                                <div class="middle-content been-there">
+                                    <h5>Zara</h5>
+                                    <h5 class="no-bold">
+                                        Dubai Mall/Downtown > I5, Ground Floor
+                                    </h5>
+                                </div>
+                                <div class="icons-holder">
+                                    <img class="marker" title="Add to favourites" src="images/map-marker-icon.png">
+                                    <img class="heart" title="" src="images/hearts-icon.png">
+                                    <span class="count">22</span>
+                                </div>
+                            </section>
+                            <section class="followers-container">
+                                <div class="brand-dp" style="background-image: url(images/charles-keith.jpg);"></div>
+
+                                <div class="middle-content been-there">
+                                    <h5>Charles & Keith</h5>
+                                    <h5 class="no-bold">
+                                        Deira City Centre > 108, First Floor
+                                    </h5>
+                                </div>
+                                <div class="icons-holder">
+                                    <img class="marker" title="Add to favourites" src="images/been-there-red.png">
+                                    <img class="heart" title="" src="images/heart-red.png">
+                                    <span class="count">25</span>
+                                </div>
+                            </section>
+                            <section class="followers-container">
+                                <div class="brand-dp" style="background-image: url(images/typo.png);"></div>
+
+                                <div class="middle-content been-there">
+                                    <h5>Typo</h5>
+                                    <h5 class="no-bold">
+                                        Al Wasl > Ground Floor, Box Park
+                                    </h5>
+                                </div>
+                                <div class="icons-holder">
+                                    <img class="marker" title="Add to favourites" src="images/map-marker-icon.png">
+                                    <img class="heart" title="" src="images/hearts-icon.png">
+                                    <span class="count">15</span>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="tab-content">

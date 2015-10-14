@@ -44,7 +44,7 @@ $(function () {
         showTab(location.hash.replace("#", ""));
     });
 
-    $('[data-tab="about"]').click();
+    $('[data-tab="activity"]').click();
 
     // Trigger the event hashchange on page load, using jquery-hashchange-plugin
     $(window).hashchange();

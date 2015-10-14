@@ -616,18 +616,30 @@
                                     &:last-of-type{
                                         border: none;
                                     }
-                                    .profile-dp{
+                                    .profile-dp, .brand-dp{
                                         display: inline-block;
                                         border-radius: 50%;
                                         .background-picture(7%, 7%);
-                                        margin-right: 20px;
+                                        margin-right: 5px;
                                         cursor: pointer;
+                                    }
+                                    .brand-dp{
+                                        border-radius: 2px;
                                     }
                                     .middle-content{
                                         display: inline-block;
                                         width: 75%;
                                         text-align: left;
                                         vertical-align: super;
+                                        &.been-there{
+                                            width: 64%;
+                                            @media @desktop-strict{
+                                                width: 60%;
+                                            }
+                                            @media @tablet-strict{
+                                                width: 50%;
+                                            }
+                                        }
                                         h3{
                                             margin: 5px 0;
                                             color: #575757;
@@ -636,12 +648,95 @@
                                             margin: 0;
                                         }
                                     }
-                                    .follow-icon-holder{
+                                    .follow-icon-holder, .icons-holder{
                                         display: inline-block;
                                         width: 6%;
                                         cursor: pointer;
                                         img{
                                             width: 70%;
+                                            margin-right: 10%;
+                                        }
+                                    }
+                                    .icons-holder{
+                                        width: 26%;
+                                        vertical-align: super;
+                                        img,span{
+                                            vertical-align: middle;
+                                        }
+                                        img{
+                                            width: 30px;
+                                            &.marker{
+                                                width: 14px;
+                                            }
+                                            &.heart{
+                                                width: 20px;
+                                            }
+                                        }
+                                        span{
+                                            width: 20%;
+                                            &.count{
+                                                background-color: #fbdad9;
+                                                padding: 10px 15px;
+                                                border-radius: 3px;
+                                            }
+                                        }
+
+                                        @media @desktop-strict{
+                                            width: 25%;
+                                        }
+                                        @media @tablet-strict{
+                                            width: 33%;
+                                        }
+                                    }
+
+                                    @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
+                                        padding: 10px 0;
+                                        .follow-button{
+                                            display: inline-block;
+                                            width: 70%;
+                                            vertical-align: top;
+                                            text-align: right;
+                                            padding-top: 15px;
+                                            button{
+                                                img{
+                                                    width: 20px;
+                                                }
+                                            }
+                                        }
+                                        .profile-dp, .brand-dp{
+                                            display: inline-block;
+                                            border-radius: 2px;
+                                            .background-picture(80px, 80px);
+                                            margin-right: 5px;
+                                            cursor: pointer;
+                                        }
+                                        .middle-content{
+                                            &.been-there{
+                                                width: 60%;
+
+                                            }
+                                        }
+                                        .icons-holder {
+                                            width: 100%;
+                                            vertical-align: top;
+                                            padding: 20px 0;
+                                            background: lighten(black, 98%);
+                                            border-top: 1px solid #f2f2f2;
+
+                                            img{
+                                                margin-right: 10px;
+                                                &.marker{
+                                                }
+                                                &.heart{
+                                                }
+                                            }
+                                            span{
+                                                &.count{
+                                                    font-size: 12px;
+                                                    padding: 5px;
+                                                    box-shadow: 2px 2px 2px #aaa;
+                                                }
+                                            }
                                         }
                                     }
                                 }
