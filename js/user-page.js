@@ -83,6 +83,28 @@ $(function () {
         return false;
     });
 
+    var rotation = 0;
+
+    jQuery.fn.rotate = function(degrees) {
+        $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+            '-moz-transform' : 'rotate('+ degrees +'deg)',
+            '-ms-transform' : 'rotate('+ degrees +'deg)',
+            'transform' : 'rotate('+ degrees +'deg)'});
+    };
+
+    /*$('.rotate').click(function() {
+     rotation += 5;
+     $(this).rotate(rotation);
+     });*/
+
+    $('[data-add-button]').hover(
+        function() {
+            $( this ).addClass('box_rotate box_transition').html('<i class="fa fa-pencil fa-rotate-180"></i>');
+        }, function() {
+            $( this ).removeClass('box_rotate').html('<i class="fa fa-plus"></i>');
+        }
+    );
+
     $addButton.on('click', function(e){
         $overlay.fadeIn();
         $addBox.show().addClass('bounceIn');
