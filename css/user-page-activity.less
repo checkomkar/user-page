@@ -6,6 +6,26 @@
         background-size: cover;
         min-height: 320px;
         position: relative;
+        .content-title{
+            padding: 20px 25px;
+            width: 100%;
+            .back-button{
+                .background-picture(10%, 10%);
+                display: inline-block;
+            }
+            .title{
+                width: 89%;
+                color: white;
+                text-align: center;
+                font-size: 22px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+        &.cover-container-sm{
+            min-height: inherit;
+            padding: 0 45px;
+        }
         @media @desktop-strict {
             min-height: 310px;
         }
