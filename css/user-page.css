@@ -37,6 +37,52 @@
 [data-user-network-page] .cover-container.cover-container-sm {
   min-height: inherit;
   padding: 0 45px;
+  position: relative;
+}
+[data-user-activity-page] .cover-container.cover-container-sm .content-title,
+[data-user-network-page] .cover-container.cover-container-sm .content-title {
+  padding: 20px 25px;
+  width: 100%;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+}
+[data-user-activity-page] .cover-container.cover-container-sm .content-title .back-button,
+[data-user-network-page] .cover-container.cover-container-sm .content-title .back-button {
+  width: 50px;
+  box-sizing: border-box;
+  padding-bottom: 35px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+[data-user-activity-page] .cover-container.cover-container-sm .content-title .title,
+[data-user-network-page] .cover-container.cover-container-sm .content-title .title {
+  width: 89%;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+[data-user-activity-page] .cover-container.cover-container-sm .content-title.sticky,
+[data-user-network-page] .cover-container.cover-container-sm .content-title.sticky {
+  background-color: black;
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+  padding: 10px 25px;
+}
+[data-user-activity-page] .cover-container.cover-container-sm .content-title.sticky .back-button,
+[data-user-network-page] .cover-container.cover-container-sm .content-title.sticky .back-button {
+  width: 25px;
+  box-sizing: border-box;
+  padding-bottom: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin-top: -6px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   [data-user-activity-page] .cover-container,
@@ -1855,6 +1901,13 @@ hr.border-light {
 }
 .button.button-shadow {
   box-shadow: 3px 3px 3px #333;
+}
+.sticky {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
 @media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   .visible-lg {

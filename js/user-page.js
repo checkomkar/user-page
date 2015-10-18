@@ -60,6 +60,9 @@ $(function () {
 
         e.preventDefault();
     });
+
+    var $stickyHeader = $('[data-sticky-header]');
+
     var $backButton = $('[data-back-button]');
     var $container = $('[data-tab-target]');
     var $trigger = $('[data-tab-trigger]');
@@ -77,13 +80,21 @@ $(function () {
 
     var $addToSection = $('[data-add-to-section]');
     var $addWishlistTrigger = $('[data-add-wishlist-trigger]');
+    var rotation = 0;
 
     $backButton.on('click', function(e){
         parent.history.back();
         return false;
     });
 
-    var rotation = 0;
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 30){
+            $stickyHeader.addClass('sticky');
+        }
+        else{
+            $stickyHeader.removeClass('sticky');
+        }
+    });
 
     jQuery.fn.rotate = function(degrees) {
         $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
