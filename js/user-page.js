@@ -88,7 +88,7 @@ $(function () {
     });
 
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 30){
+        if ($(this).scrollTop() > 10){
             $stickyHeader.addClass('sticky');
         }
         else{

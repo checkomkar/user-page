@@ -26,7 +26,7 @@
 }
 [data-user-activity-page] .cover-container .content-title .title,
 [data-user-network-page] .cover-container .content-title .title {
-  width: 89%;
+  width: 85%;
   color: white;
   text-align: center;
   font-size: 22px;
@@ -42,7 +42,6 @@
 [data-user-activity-page] .cover-container.cover-container-sm .content-title,
 [data-user-network-page] .cover-container.cover-container-sm .content-title {
   padding: 20px 25px;
-  width: 100%;
   -webkit-transition: 0.5s ease;
   -moz-transition: 0.5s ease;
   -ms-transition: 0.5s ease;
@@ -377,10 +376,10 @@
     padding: 15px 20px;
   }
 }
-@media only screen and (max-width: 995px) {
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li,
   [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li {
-    padding: 7px;
+    padding: 7px 10px;
   }
   [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li a,
   [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li a {
@@ -846,6 +845,7 @@
   [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section .like-count-container .comment-count,
   [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section .section-content .general-container .like-comment-container .like_section .like-count-container .comment-count {
     margin: 0 0px;
+    font-size: 11px;
   }
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .activity-section .section-content .general-container .like-comment-container .show-comments-container p i,
@@ -1734,7 +1734,7 @@
   [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-button,
   [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .followers-section-container .followers-container .follow-button {
     display: inline-block;
-    width: 70%;
+    width: 65%;
     vertical-align: top;
     text-align: right;
     padding-top: 15px;

@@ -14,7 +14,7 @@
                 display: inline-block;
             }
             .title{
-                width: 89%;
+                width: 85%;
                 color: white;
                 text-align: center;
                 font-size: 22px;
@@ -28,7 +28,6 @@
             position: relative;
             .content-title{
                 padding: 20px 25px;
-                width: 100%;
                 .back-button{
                     .background-picture(50px, 35px);
                     display: inline-block;
@@ -264,11 +263,15 @@
                                 padding: 15px 20px;
                             }
 
-                            @media only screen and (max-width: 995px){
-                                padding: 7px;
+                            @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
+                                padding: 7px 10px;
                                 a{
                                     font-size: 0.8em;
                                 }
+                            }
+
+                            @media only screen and (max-width: 995px){
+
                             }
                             &:first-of-type{
                                 margin-left: 0;
@@ -442,6 +445,7 @@
                                                         margin: 0;
                                                         .like-count, .comment-count{
                                                             margin: 0 0px;
+                                                            font-size: 11px;
                                                         }
                                                     }
                                                 }
@@ -748,7 +752,7 @@
                                         padding: 10px 0;
                                         .follow-button{
                                             display: inline-block;
-                                            width: 70%;
+                                            width: 65%;
                                             vertical-align: top;
                                             text-align: right;
                                             padding-top: 15px;
