@@ -240,6 +240,9 @@ hr.border-light {
                 top: 20px !important;
             }
         }
+        @media @smphone{
+            width: 100%;
+        }
         .close{
             background-color: transparent;
             position: absolute;
@@ -258,6 +261,10 @@ hr.border-light {
             background-repeat: no-repeat;
         }
         .add-to-wishlist{
+            @media @phone-strict, @vsmphone{
+                width: 100%;
+            }
+
             .cover{
                 position: relative;
                 text-align: center;
@@ -926,10 +933,10 @@ hr.border-light {
                             content:'';
                         }
                         li{
-                            margin: 0;
+                            margin-left: 1px;
                             float: left;
                             list-style: none;
-                            padding: 15px 30px;
+                            padding: 10px 44px;
                             @media @desktop-strict {
                                 padding: 15px 25px;
                             }
@@ -1419,7 +1426,202 @@ hr.border-light {
                                     }
                                 }
                             }
+                            .find-friends-section-container{
+                                .box-sizing(border-box);
+                                color: #606060;
+                                padding: 10px;
+                                h3{
+                                    margin-bottom: 20px;
+                                }
+                                label{
+                                    font-size: 14px;
+                                }
+                                form.search-store{
+                                    margin: 10px 0 50px 0px;
+                                    input[type="text"]{
+                                        margin: 0 -5px 0 0;
+                                        padding: 6px 15px;
+                                        font-size: 14px;
+                                        border:1px solid #c0c7cd;
+                                        border-right: 0px;
+                                        border-top-left-radius: 5px 5px;
+                                        border-bottom-left-radius: 5px 5px;
+                                        width: 50%;
+                                    }
+                                    input[type="submit"]{
+                                        margin: 0;
+                                        padding: 5.5px 15px;
+                                        font-family: inherit;
+                                        font-size:14px;
+                                        outline: none;
+                                        cursor: pointer;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        color: #ffffff;
+                                        vertical-align: bottom;
+                                        border: none;
+                                        background-color: #c0c7cd;
+                                        background-image: url(../images/search-icon.png);
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: 20px;
+                                        border-top-right-radius: 5px 5px;
+                                        border-bottom-right-radius: 5px 5px;
+                                        &:hover{
+                                            text-decoration: none;
+                                            background-color: darkgray;
+                                        }
+                                        &:after{
+                                            clear: both;
+                                        }
+                                    }
+                                }
 
+                                .connect{
+                                    text-align: center;
+                                    .box-sizing(border-box);
+                                    padding: 50px 0 0;
+                                    .fb-button{
+                                        cursor: pointer;
+                                        border-radius: 2px;
+                                        background-color: #3b5998;
+                                        width: 53.5%;
+                                        font-size: 0;
+                                        margin: 0 auto;
+                                        .fb-icon, .text{
+                                            display: inline-block;
+                                            color: white;
+                                            vertical-align: middle;
+                                            margin: 0;
+                                            font-size: 14px;
+                                            i{
+                                                vertical-align: middle;
+                                            }
+                                        }
+                                        .fb-icon{
+                                            width: 50px;
+                                            height: 50px;
+                                            background-color: #2b4988;
+                                            .box-sizing(border-box);
+                                            padding-top: 10px;
+                                        }
+                                        .text{
+                                            background-color: #3b5998;
+                                            font-weight: bold;
+                                            margin: 0 37px;
+                                        }
+                                    }
+                                    h3.red-font{
+                                        color: red;
+                                    }
+                                }
+
+                            }
+                            .statistics-section-container{
+                                .headings{
+                                    text-align: center;
+                                    background-color: #f9f7f7;
+                                    padding: 10px 0;
+                                    text-transform: uppercase;
+                                    font-size: 16px;
+                                }
+                                h1{
+                                    text-align: center;
+                                    font-size: 32px;
+                                }
+                                .point-progress{
+                                    text-align: center;
+                                    width: 70%;
+                                    margin: 20px auto;
+                                    height: 200px;
+                                    .ProcessStats{
+                                        width: auto;
+                                        float: left;
+                                        text-align: center;
+                                        padding: 0;
+                                        width: 20%;
+                                        &.active{
+                                            .ProcessStatsTopImageBulletGray{
+                                                background: url(../images/red-dot.jpg) center center repeat-x;
+                                                background-size: 1px;
+                                            }
+                                            .ProcessStatsBottomDetailsGray{
+                                                color: lighten(red, 10%);
+                                            }
+                                        }
+                                        .ProcessStatsTopImage{
+                                            width: 100%;
+                                            float: left;
+                                            text-align: center;
+                                            padding: 0 0 25px;
+                                            background-size: 25px 25px;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            height: 25px;
+                                            img{
+                                                width: 25px;
+                                                height: 25px;
+                                            }
+                                        }
+                                        .ProcessStatsTopImageBulletGray{
+                                            width: 100%;
+                                            float: left;
+                                            text-align: center;
+                                            padding: 10px 0;
+                                            background: url(http://www.yallaspree.com/theme/Cakestrap/img/images_eng/gray_middle_border.jpg) center center repeat-x;
+                                            background-size: 1px;
+                                            img{
+                                                vertical-align: middle;
+                                            }
+                                        }
+                                        .ProcessStatsBottomDetailsGray{
+                                            width: 100%;
+                                            float: left;
+                                            padding: 0;
+                                            font-weight: 400;
+                                            font-size: 12px;
+                                            color: #7f7f7f;
+                                            text-align: center;
+                                            text-transform: uppercase;
+                                            line-height: 1.5;
+                                        }
+                                    }
+                                }
+                                table.points-guide{
+                                    width: 100%;
+                                    .box-sizing(border-box);
+                                    font-size: 12px;
+                                    padding: 10px;
+                                    tr{
+                                        &:nth-child(odd){
+                                            background-color: lighten(black, 90%);
+                                        }
+                                        th,td{
+                                            padding: 5px 10px;
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
+                            .social-tabs{
+                                border-top: 1px solid gainsboro;
+                                border-bottom: 1px solid gainsboro;
+                                ul{
+                                    margin: 0;
+                                    padding: 0;
+                                    li{
+                                        display: inline-block;
+                                        text-transform: uppercase;
+                                        .box-sizing(border-box);
+                                        padding: 20px;
+                                        &.active{
+                                            a{
+                                                color: red;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                         .active{
                             display:block;
