@@ -379,7 +379,7 @@
 @media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li,
   [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li {
-    padding: 7px 10px;
+    padding: 7px 7px;
   }
   [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li a,
   [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li a {
@@ -1936,6 +1936,51 @@
   text-align: center;
   font-size: 32px;
 }
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats h4,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats h4 {
+  border-bottom: none;
+  margin: 20px 30px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul {
+  font-size: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li {
+  font-size: 12px;
+  display: inline-block;
+  text-align: left;
+  width: 25%;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li:last-of-type,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li:last-of-type {
+  border-right: none;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li h5,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li h5 {
+  font-weight: normal;
+  font-size: 14px;
+  margin: 10px 0;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li img,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li img {
+  width: 10px;
+}
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .point-progress,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .point-progress {
   text-align: center;
@@ -2021,6 +2066,130 @@
   padding: 5px 10px;
   text-align: left;
 }
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container h3,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container h3 {
+  letter-spacing: 2px;
+  color: #575757;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info p,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info p {
+  margin: 10px 0;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info label,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info label {
+  display: block;
+  text-transform: uppercase;
+  color: #575757;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info select,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info select {
+  border: 1px solid #ddd;
+  display: inline-block;
+  padding: 5px;
+  font-family: inherit;
+  font-size: 12px;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input:hover,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input:hover,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea:hover,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea:hover,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info select:hover,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info select:hover,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input:focus,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input:focus,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea:focus,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea:focus,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info select:focus,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info select:focus {
+  border: 1px solid #333;
+  outline: none;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input[type="text"],
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input[type="text"],
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea {
+  width: 98%;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea {
+  height: 100px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container h3,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container h3 {
+  letter-spacing: 2px;
+  color: #575757;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings {
+  width: 100%;
+  border-collapse: collapse;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings th,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings th,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings td,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings td {
+  text-align: left;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings td,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check,
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check-info,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check-info {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check {
+  width: 5%;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check-info,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check-info {
+  width: 90%;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check-info .light,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check-info .light {
+  color: #9e9e9e;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container p,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container p {
+  margin: 20px 0;
+}
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .active,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .active {
   display: block;
@@ -2060,6 +2229,12 @@ body a:hover {
   /* Opera 10.50-12.00 */
   transform: rotate(180deg);
   /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
+.font-red {
+  color: red;
+}
+.font-red a {
+  color: red;
 }
 .box_transition {
   -webkit-transition: all 0.5s ease-out;
@@ -2977,11 +3152,11 @@ hr.border-light {
   color: #4c4c4c;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links a {
-  padding: 9px 15px;
+  padding: 9px 5px;
   display: inline-block;
   border-radius: 3px 3px 0px 0px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: #4c4c4c;
   transition: all linear 0.15s;
@@ -3914,6 +4089,44 @@ hr.border-light {
   text-align: center;
   font-size: 32px;
 }
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats h4 {
+  border-bottom: none;
+  margin: 20px 30px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul {
+  font-size: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li {
+  font-size: 12px;
+  display: inline-block;
+  text-align: left;
+  width: 25%;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li:last-of-type {
+  border-right: none;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li h5 {
+  font-weight: normal;
+  font-size: 14px;
+  margin: 10px 0;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li img {
+  width: 10px;
+}
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .point-progress {
   text-align: center;
   width: 70%;
@@ -4004,6 +4217,101 @@ hr.border-light {
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .social-tabs ul li.active a {
   color: red;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container h3 {
+  letter-spacing: 2px;
+  color: #575757;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info p {
+  margin: 10px 0;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info label {
+  display: block;
+  text-transform: uppercase;
+  color: #575757;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info select {
+  border: 1px solid #ddd;
+  display: inline-block;
+  padding: 5px;
+  font-family: inherit;
+  font-size: 12px;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input:hover,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea:hover,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info select:hover,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input:focus,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea:focus,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info select:focus {
+  border: 1px solid #333;
+  outline: none;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info input[type="text"],
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea {
+  width: 98%;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info textarea {
+  height: 100px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container h3 {
+  letter-spacing: 2px;
+  color: #575757;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings {
+  width: 100%;
+  border-collapse: collapse;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings th,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings td {
+  text-align: left;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check,
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check-info {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check {
+  width: 5%;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check-info {
+  width: 90%;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check-info .light {
+  color: #9e9e9e;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container p {
+  margin: 20px 0;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .active {
   display: block;

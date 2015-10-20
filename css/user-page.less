@@ -55,6 +55,13 @@ body{
     transform: rotate(180deg);  /* Firefox 16+, IE 10+, Opera 12.50+ */
 }
 
+.font-red{
+    color: red;
+    a{
+        color: red;
+    }
+}
+
 .box_transition {
     -webkit-transition: all 0.5s ease-out;  /* Chrome 1-25, Safari 3.2+ */
     -moz-transition: all 0.5s ease-out;  /* Firefox 4-15 */
@@ -974,12 +981,12 @@ hr.border-light {
                             }
                         }
                         a{
-                            padding:9px 15px;
+                            padding:9px 5px;
                             display:inline-block;
                             border-radius:3px 3px 0px 0px;
                             //background:#7FB5DA;
                             text-decoration: none;
-                            font-size:16px;
+                            font-size:14px;
                             font-weight:600;
                             color:#4c4c4c;
                             transition:all linear 0.15s;
@@ -1529,6 +1536,42 @@ hr.border-light {
                                     text-align: center;
                                     font-size: 32px;
                                 }
+                                .show-stats{
+                                    margin: 0 auto;
+                                    .box-sizing(border-box);
+                                    padding: 10px 20px;
+                                    h4{
+                                        border-bottom: none;
+                                        margin: 20px 30px;
+                                    }
+                                    ul{
+                                        font-size: 0;
+                                        width: 100%;
+                                        margin: 0 auto;
+                                        padding: 0;
+                                        text-align: center;
+                                        li{
+                                            font-size: 12px;
+                                            display: inline-block;
+                                            text-align: left;
+                                            width: 25%;
+                                            padding: 10px 20px;
+                                            border-bottom: 1px solid #ddd;
+                                            border-right: 1px solid #ddd;
+                                            &:last-of-type{
+                                                border-right: none;
+                                            }
+                                            h5{
+                                                font-weight: normal;
+                                                font-size: 14px;
+                                                margin: 10px 0;
+                                            }
+                                            img{
+                                                width: 10px;
+                                            }
+                                        }
+                                    }
+                                }
                                 .point-progress{
                                     text-align: center;
                                     width: 70%;
@@ -1620,6 +1663,85 @@ hr.border-light {
                                             }
                                         }
                                     }
+                                }
+                            }
+                            .edit-section-container{
+                                .box-sizing(border-box);
+                                padding: 10px 20px;
+                                h3{
+                                    letter-spacing: 2px;
+                                    color: #575757;
+                                }
+                                form.profile-info{
+                                    p{
+                                        margin: 10px 0;
+                                    }
+                                    label{
+                                        display: block;
+                                        text-transform: uppercase;
+                                        color: #575757;
+                                    }
+                                    input, textarea, select{
+                                        border: 1px solid #ddd;
+                                        display: inline-block;
+                                        padding: 5px;
+                                        font-family: inherit;
+                                        font-size: 12px;
+                                        width: 100%;
+                                        border-radius: 5px;
+                                        .transition(0.4s ease);
+                                        &:hover, &:focus{
+                                            border: 1px solid #333;
+                                            outline: none;
+                                        }
+                                    }
+                                    input[type="text"], textarea{
+                                        width: 98%;
+                                    }
+                                    textarea{
+                                        height: 100px;
+                                    }
+                                }
+                            }
+                            .notification-section-container{
+                                .box-sizing(border-box);
+                                padding: 10px 20px;
+                                h3{
+                                    letter-spacing: 2px;
+                                    color: #575757;
+                                }
+                                table.notification-settings{
+                                    width: 100%;
+                                    border-collapse: collapse;
+                                    th,td{
+                                        text-align: left;
+                                    }
+                                    td{
+                                        border-bottom: 1px solid #ddd;
+                                        padding: 10px 0px;
+                                    }
+                                }
+                                .check, .check-info{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    margin-bottom: 20px;
+
+                                }
+                                .check{
+                                    width: 5%;
+                                }
+                                .check-info{
+                                    width: 90%;
+                                    .light{
+                                        color: #9e9e9e;
+                                    }
+                                }
+                            }
+                            .security-section-container{
+                                .box-sizing(border-box);
+                                padding: 10px 20px;
+                                p{
+                                    margin: 20px 0;
                                 }
                             }
                         }
