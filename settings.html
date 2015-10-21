@@ -131,7 +131,21 @@
                     </div>
                     <div id="tab3" class="tab">
                         <article class="security-section-container">
-                            <p class="font-red"><a href="/">Set Password</a></p>
+                            <p class="font-red" data-password-trigger>Set Password</p>
+                            <form class="reset-password-form" data-reset-password-form>
+                                <p>You can set a password to access your account</p>
+                                <table>
+                                    <tr>
+                                        <td><label>Password</label></td>
+                                        <td><input type="password"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Confirm Password</label></td>
+                                        <td><input type="password"></td>
+                                    </tr>
+                                </table>
+                                <button type="submit" class="button button-sm red">Save</button>
+                            </form>
                             <p>
                                 <span class="font-red"><a href="/">Delete my account</a></span><br>
                                 Please note that this action is irreversible and all the data associated with your account will be permanently deleted in 30 days

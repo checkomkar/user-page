@@ -250,6 +250,9 @@
                             clear:both;
                             content:'';
                         }
+                        @media @phone-strict, @smphone, @vsmphone, @vvsmphone{
+                            display: block;
+                        }
                         li{
                             margin: 0;
                             float: left;
@@ -268,6 +271,10 @@
                                 a{
                                     font-size: 0.8em;
                                 }
+                            }
+
+                            @media @smphone, @vsmphone, @vvsmphone{
+                                width: 100%;
                             }
 
                             @media only screen and (max-width: 995px){
@@ -929,7 +936,6 @@
                                 .show-stats{
                                     margin: 0 auto;
                                     .box-sizing(border-box);
-                                    padding: 10px 20px;
                                     h4{
                                         border-bottom: none;
                                         margin: 20px 30px;
@@ -942,12 +948,10 @@
                                         text-align: center;
                                         li{
                                             font-size: 12px;
-                                            display: inline-block;
                                             text-align: left;
-                                            width: 25%;
+                                            width: 100%;
                                             padding: 10px 20px;
                                             border-bottom: 1px solid #ddd;
-                                            border-right: 1px solid #ddd;
                                             &:last-of-type{
                                                 border-right: none;
                                             }
@@ -964,7 +968,7 @@
                                 }
                                 .point-progress{
                                     text-align: center;
-                                    width: 70%;
+                                    width: 100%;
                                     margin: 20px auto;
                                     height: 200px;
                                     .ProcessStats{
@@ -980,6 +984,7 @@
                                             }
                                             .ProcessStatsBottomDetailsGray{
                                                 color: lighten(red, 10%);
+                                                font-size: 10px;
                                             }
                                         }
                                         .ProcessStatsTopImage{
@@ -1012,7 +1017,7 @@
                                             float: left;
                                             padding: 0;
                                             font-weight: 400;
-                                            font-size: 12px;
+                                            font-size: 10px;
                                             color: #7f7f7f;
                                             text-align: center;
                                             text-transform: uppercase;
@@ -1042,6 +1047,7 @@
                                 h3{
                                     letter-spacing: 2px;
                                     color: #575757;
+                                    font-size: 16px;
                                 }
                                 form.profile-info{
                                     p{
@@ -1080,12 +1086,14 @@
                                 h3{
                                     letter-spacing: 2px;
                                     color: #575757;
+                                    font-size: 16px;
                                 }
                                 table.notification-settings{
                                     width: 100%;
                                     border-collapse: collapse;
                                     th,td{
                                         text-align: left;
+                                        font-size: 12px;
                                     }
                                     td{
                                         border-bottom: 1px solid #ddd;
@@ -1099,7 +1107,7 @@
 
                                 }
                                 .check{
-                                    width: 5%;
+                                    width: 8%;
                                 }
                                 .check-info{
                                     width: 90%;
@@ -1111,6 +1119,24 @@
                             .security-section-container{
                                 .box-sizing(border-box);
                                 padding: 10px 20px;
+                                [data-password-trigger]{
+                                    cursor: pointer;
+                                }
+                                .reset-password-form{
+                                    display: none;
+                                    table{
+                                        width: 70%;
+                                        margin-bottom: 20px;
+                                        td{
+                                            width: 50%;
+                                            font-size: 12px;
+                                            padding: 10px 0;
+                                        }
+                                    }
+                                    label{
+                                        margin-right: 50px;
+                                    }
+                                }
                                 p{
                                     margin: 20px 0;
                                 }

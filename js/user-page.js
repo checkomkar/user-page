@@ -80,6 +80,14 @@ $(function () {
 
     var $addToSection = $('[data-add-to-section]');
     var $addWishlistTrigger = $('[data-add-wishlist-trigger]');
+    var $addShoppingTrigger = $('[data-add-shopping-trigger]');
+    var $addToWishlistSection = $('[data-add-to-wishlist]');
+    var $addShopUpdateSection = $('[data-add-shopping-update]');
+
+    //Settings
+    var $passwordTrigger = $('[data-password-trigger]');
+    var $resetPasswordForm = $('[data-reset-password-form]');
+
     var rotation = 0;
 
     $backButton.on('click', function(e){
@@ -103,10 +111,19 @@ $(function () {
             'transform' : 'rotate('+ degrees +'deg)'});
     };
 
+    $passwordTrigger.on('click', function(e){
+        $resetPasswordForm.slideToggle();
+    });
+
     /*$('.rotate').click(function() {
      rotation += 5;
      $(this).rotate(rotation);
      });*/
+
+    var deviceWidth = $(window).width();
+    if(deviceWidth<= 320){
+        $('.add-to-section').css({width: '320px'});
+    }
 
     $('[data-add-button]').hover(
         function() {
@@ -124,6 +141,7 @@ $(function () {
     $overlay.on('click', function(){
         $(this).fadeOut();
         $addBox.hide();
+        $addToSection.fadeOut('fast');
     });
 
     $('[data-add-box] li').on('click', function(e){
@@ -139,6 +157,15 @@ $(function () {
 
     $addWishlistTrigger.on('click', function(e){
         $overlay.fadeIn(100);
+        $addShopUpdateSection.addClass('hide');
+        $addToWishlistSection.removeClass('hide');
+        $addToSection.show().addClass('slideInRight');
+    });
+
+    $addShoppingTrigger.on('click', function(e){
+        $overlay.fadeIn(100);
+        $addShopUpdateSection.removeClass('hide');
+        $addToWishlistSection.addClass('hide');
         $addToSection.show().addClass('slideInRight');
     });
 

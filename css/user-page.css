@@ -357,6 +357,12 @@
   clear: both;
   content: '';
 }
+@media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links {
+    display: block;
+  }
+}
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li {
   margin: 0;
@@ -384,6 +390,12 @@
   [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li a,
   [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li a {
     font-size: 0.8em;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
+  [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li,
+  [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li {
+    width: 100%;
   }
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-links li:first-of-type,
@@ -1942,7 +1954,6 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10px 20px;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats h4,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats h4 {
@@ -1960,12 +1971,10 @@
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li {
   font-size: 12px;
-  display: inline-block;
   text-align: left;
-  width: 25%;
+  width: 100%;
   padding: 10px 20px;
   border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li:last-of-type,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .show-stats ul li:last-of-type {
@@ -1984,7 +1993,7 @@
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .point-progress,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .point-progress {
   text-align: center;
-  width: 70%;
+  width: 100%;
   margin: 20px auto;
   height: 200px;
 }
@@ -2004,6 +2013,7 @@
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .point-progress .ProcessStats.active .ProcessStatsBottomDetailsGray,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .point-progress .ProcessStats.active .ProcessStatsBottomDetailsGray {
   color: #ff3333;
+  font-size: 10px;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .point-progress .ProcessStats .ProcessStatsTopImage,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .statistics-section-container .point-progress .ProcessStats .ProcessStatsTopImage {
@@ -2040,7 +2050,7 @@
   float: left;
   padding: 0;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
   color: #7f7f7f;
   text-align: center;
   text-transform: uppercase;
@@ -2077,6 +2087,7 @@
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container h3 {
   letter-spacing: 2px;
   color: #575757;
+  font-size: 16px;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info p,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .edit-section-container form.profile-info p {
@@ -2142,6 +2153,7 @@
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container h3 {
   letter-spacing: 2px;
   color: #575757;
+  font-size: 16px;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings {
@@ -2153,6 +2165,7 @@
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings td,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings td {
   text-align: left;
+  font-size: 12px;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings td,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container table.notification-settings td {
@@ -2169,7 +2182,7 @@
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check {
-  width: 5%;
+  width: 8%;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check-info,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .notification-section-container .check-info {
@@ -2185,6 +2198,29 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px 20px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container [data-password-trigger],
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container [data-password-trigger] {
+  cursor: pointer;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form {
+  display: none;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form table,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form table {
+  width: 70%;
+  margin-bottom: 20px;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form table td,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form table td {
+  width: 50%;
+  font-size: 12px;
+  padding: 10px 0;
+}
+[data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form label,
+[data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form label {
+  margin-right: 50px;
 }
 [data-user-activity-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container p,
 [data-user-network-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container p {
@@ -2384,8 +2420,8 @@ hr.border-light {
 @media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
   [data-user-page] .add-to-section {
     width: 100%;
-    right: 0px;
     top: 0;
+    right: auto !important;
     left: 0;
     min-height: 100%;
   }
@@ -2395,16 +2431,21 @@ hr.border-light {
     top: 20px !important;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 479px) {
+@media "only screen and (min-width: 320px) and (max-width: 319px)" {
   [data-user-page] .add-to-section {
-    width: 100%;
+    width: 320px !important;
+  }
+  [data-user-page] .add-to-section .close {
+    left: 10px !important;
+    background-image: url(../images/arrow-left-stick.png) !important;
+    top: 20px !important;
   }
 }
 [data-user-page] .add-to-section .close {
   background-color: transparent;
   position: absolute;
-  left: -30px;
-  top: 0;
+  right: 0px;
+  top: 1px;
   width: 30px;
   height: 30px;
   z-index: 99;
@@ -2412,7 +2453,7 @@ hr.border-light {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 12px 20px;
+  padding: 12px 16px;
   color: white;
   cursor: pointer;
   background-image: url(../images/cross-thin-white.png);
@@ -2420,11 +2461,13 @@ hr.border-light {
   background-repeat: no-repeat;
 }
 @media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 240px) and (max-width: 319px) {
-  [data-user-page] .add-to-section .add-to-wishlist {
+  [data-user-page] .add-to-section .add-to-wishlist,
+  [data-user-page] .add-to-section .add-shopping-update {
     width: 100%;
   }
 }
-[data-user-page] .add-to-section .add-to-wishlist .cover {
+[data-user-page] .add-to-section .add-to-wishlist .cover,
+[data-user-page] .add-to-section .add-shopping-update .cover {
   position: relative;
   text-align: center;
   -webkit-box-sizing: border-box;
@@ -2435,10 +2478,12 @@ hr.border-light {
   background-color: #ff6666;
   padding-top: 50px;
 }
-[data-user-page] .add-to-section .add-to-wishlist .cover i {
+[data-user-page] .add-to-section .add-to-wishlist .cover i,
+[data-user-page] .add-to-section .add-shopping-update .cover i {
   font-size: 32px;
 }
-[data-user-page] .add-to-section .add-to-wishlist .details-container {
+[data-user-page] .add-to-section .add-to-wishlist .details-container,
+[data-user-page] .add-to-section .add-shopping-update .details-container {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2446,7 +2491,9 @@ hr.border-light {
   overflow: auto;
 }
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form input,
-[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form textarea {
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form input,
+[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form textarea,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form textarea {
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #ddd;
@@ -2461,23 +2508,35 @@ hr.border-light {
   width: 95%;
 }
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form input:-moz-placeholder,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form input:-moz-placeholder,
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form textarea:-moz-placeholder,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form textarea:-moz-placeholder,
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form input::-webkit-input-placeholder,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form input::-webkit-input-placeholder,
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form textarea::-webkit-input-placeholder,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form textarea::-webkit-input-placeholder,
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form input::-moz-placeholder,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form input::-moz-placeholder,
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form textarea::-moz-placeholder,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form textarea::-moz-placeholder,
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form input:-ms-input-placeholder,
-[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form textarea:-ms-input-placeholder {
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form input:-ms-input-placeholder,
+[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form textarea:-ms-input-placeholder,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form textarea:-ms-input-placeholder {
   font-family: inherit;
 }
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form input:focus,
-[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form textarea:focus {
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form input:focus,
+[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form textarea:focus,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form textarea:focus {
   border-bottom: 1px solid red;
 }
-[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form textarea {
+[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form textarea,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form textarea {
   height: 70px;
 }
-[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form .upload-image {
+[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form .upload-image,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form .upload-image {
   width: 100%;
   height: 200px;
   -webkit-box-sizing: border-box;
@@ -2489,16 +2548,22 @@ hr.border-light {
   border: 1px dashed #aaaaaa;
 }
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form .upload-image h2,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form .upload-image h2,
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form .upload-image h3,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form .upload-image h3,
 [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form .upload-image h4,
-[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form .upload-image h5 {
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form .upload-image h4,
+[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form .upload-image h5,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form .upload-image h5 {
   margin: 0 10px;
 }
-[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form button {
+[data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form button,
+[data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form button {
   margin: 20px 7px;
 }
 @media only screen and (min-width: 480px) and (max-width: 767px), only screen and (min-width: 320px) and (max-width: 479px), only screen and (min-width: 240px) and (max-width: 319px), only screen and (min-width: 50px) and (max-width: 239px) {
-  [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form button {
+  [data-user-page] .add-to-section .add-to-wishlist .details-container form.wishlist-form button,
+  [data-user-page] .add-to-section .add-shopping-update .details-container form.wishlist-form button {
     margin: 20px 10px;
   }
 }
@@ -4309,6 +4374,23 @@ hr.border-light {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px 20px;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container [data-password-trigger] {
+  cursor: pointer;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form {
+  display: none;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form table {
+  width: 70%;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form table td {
+  width: 50%;
+  font-size: 12px;
+  padding: 10px 0;
+}
+[data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container .reset-password-form label {
+  margin-right: 50px;
 }
 [data-user-page] .wrapper #v-nav div.tab-content .inside-tabs .tab-content-child .tab .security-section-container p {
   margin: 20px 0;
